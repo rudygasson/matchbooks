@@ -1,0 +1,6 @@
+<h1>My library</h1>
+<br>
+<% @copies.each do |copy| %>
+  <img src="<%= Book.find(copy.book_id).thumbnail %>" alt="cover">
+  <p><%= Book.find(copy.book_id).title %></p>
+<% end %></p>

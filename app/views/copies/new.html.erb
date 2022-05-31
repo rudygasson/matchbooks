@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <div class="form-add">
+        <h1>Add a new book to your library</h1>
+        <br>
+        <%= simple_form_for @book, url: copies_path, method: :post do |f| %>
+          <%= f.input :isbn %>
+          <%# f.input :title %>
+          <%# f.input :author %>
+          <%# f.input :description %>
+          <%# f.input :year %>
+          <%# f.input :thumbnail %>
+          <%# f.input :cover_image %>
+          <div class='text-center'>
+            <%= f.button :submit, "Add Book", class: "btn btn-success rounded" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
