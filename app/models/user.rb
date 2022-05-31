@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :locations, through: :user_locations
   has_many :copies
+  has_many :handovers, as: :receiver
+  has_many :handovers, as: :deliverer
 end
