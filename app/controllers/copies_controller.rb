@@ -69,7 +69,7 @@ class CopiesController < ApplicationController
       # book.category = result["items"][0]["volumeInfo"]["categories"][0]
       book
     else
-      book = nil
+      nil
     end
   end
 
