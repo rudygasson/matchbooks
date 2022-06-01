@@ -3,5 +3,5 @@ class Book < ApplicationRecord
   validates :isbn, :title, :author, :year, presence: true
   validates :isbn, length: { in: 10..13 }
   validates :year, length: { is: 4 }
-  validates :description, length: { maximum: 500 }
+  #validates :description, length: { maximum: 500 }
 end

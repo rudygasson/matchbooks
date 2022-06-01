@@ -1,0 +1,9 @@
+<h1>My library</h1>
+<br>
+<%= link_to "Add a book", new_copy_path, class: "btn btn-success" %>
+<br>
+<% @copies.each do |copy| %>
+  <img src="<%= Book.find(copy.book_id).thumbnail %>" alt="cover" class="mt-3">
+  <%= link_to "Delete", copy_path(copy), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <p><%= Book.find(copy.book_id).title %></p>
+<% end %></p>
