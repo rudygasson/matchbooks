@@ -4,6 +4,7 @@
       <div class="form-add">
         <h1>Add a new book to your library</h1>
         <br>
+        <%# form_with url: copies_path, method: :post do |f| %>
         <%= simple_form_for @book, url: copies_path, method: :post do |f| %>
           <%= f.input :isbn %>
           <div class='text-center'>
