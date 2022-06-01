@@ -1,0 +1,36 @@
+.card-book {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.card-book img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-book h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-book p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.card-book .card-book-infos {
+  padding: 16px;
+}

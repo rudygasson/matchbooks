@@ -1,0 +1,434 @@
+[
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "6sElRNGXWFIC",
+        "etag": "ZOpigu/jDSY",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/6sElRNGXWFIC",
+        "volumeInfo": {
+          "title": "Turing's Cathedral",
+          "subtitle": "The Origins of the Digital Universe",
+          "authors": [
+            "George Dyson"
+          ],
+          "publisher": "Pantheon",
+          "publishedDate": "2012",
+          "description": "Documents the innovations of a group of eccentric geniuses who developed computer code in the mid-20th century as part of mathematician Alan Turin's theoretical universal machine idea, exploring how their ideas led to such developments as digital television, modern genetics and the hydrogen bomb.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780375422775"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0375422773"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 401,
+          "printType": "BOOK",
+          "categories": [
+            "Science"
+          ],
+          "averageRating": 3,
+          "ratingsCount": 16,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.1.0.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=6sElRNGXWFIC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=6sElRNGXWFIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.de/books?id=6sElRNGXWFIC&dq=isbn:9780375422775&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.de/books?id=6sElRNGXWFIC&dq=isbn:9780375422775&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Turing_s_Cathedral.html?hl=&id=6sElRNGXWFIC"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=6sElRNGXWFIC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Documents the innovations of a group of eccentric geniuses who developed computer code in the mid-20th century as part of mathematician Alan Turin&#39;s theoretical universal machine idea, exploring how their ideas led to such developments as ..."
+        }
+      }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "zAgxDAAAQBAJ",
+        "etag": "4FzRtCQxJJ0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/zAgxDAAAQBAJ",
+        "volumeInfo": {
+          "title": "Raumpatrouille",
+          "subtitle": "Geschichten",
+          "authors": [
+            "Matthias Brandt"
+          ],
+          "publisher": "Kiepenheuer & Witsch",
+          "publishedDate": "2016-09-08",
+          "description": "Streifzüge im Astronautenkostüm Dieses Buch ist eine herrliche Überraschung: Matthias Brandt zeigt mit seinem literarischen Debüt, dass er nicht nur ein herausragender Schauspieler, sondern auch ein bemerkenswerter Autor ist. Die Geschichten in Matthias Brandts erstem Buch sind literarische Reisen in einen Kosmos, den jeder kennt, der aber hier mit einem ganz besonderen Blick untersucht wird: der Kosmos der eigenen Kindheit. In diesem Fall einer Kindheit in den Siebzigerjahren des letzten Jahrhunderts in einer kleinen Stadt am Rhein, die damals Bundeshauptstadt war. Einer Kindheit, die bevölkert ist von einem manchmal bissigen Hund namens Gabor, von Herrn Vianden, mysteriösen Postboten, verschreckten Nonnen, kriegsbeschädigten Religionslehrern, einem netten Herrn Lübke von nebenan, bei dem es Kakao gibt und dem langsam die Worte ausgehen. Es gibt einen kauzigen Arbeitskollegen des Vaters, Herrn Wehner, einen Hausmeister und sogar einen Chauffeur, da der Vater gerade Bundeskanzler ist. Erzählt wird von komplizierten Fahrradausflügen, schwer bewachten Jahrmarktsbesuchen, monströsen Fußballniederlagen, skurrilen Arztbesuchen und von explodierenden und ebenso schnell wieder verlöschenden Leidenschaften wie z.B. dem Briefmarkensammeln. Nicht zuletzt lesen wir von gleichermaßen geheimnisumwobenen wie geliebten Eltern und einer Kindheit, zu der neben dem Abenteuer und der Hochstapelei auch Phantasie, Gefahr und Einsamkeit gehören. Ein Buch, das man nicht vergessen wird.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9783462316384"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "3462316389"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 176,
+          "printType": "BOOK",
+          "categories": [
+            "Fiction"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "1.13.13.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=zAgxDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=zAgxDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "de",
+          "previewLink": "http://books.google.de/books?id=zAgxDAAAQBAJ&printsec=frontcover&dq=isbn:9783462316384&hl=&cd=1&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=zAgxDAAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=zAgxDAAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 9.99,
+            "currencyCode": "EUR"
+          },
+          "retailPrice": {
+            "amount": 9.99,
+            "currencyCode": "EUR"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=zAgxDAAAQBAJ&rdid=book-zAgxDAAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 9990000,
+                "currencyCode": "EUR"
+              },
+              "retailPrice": {
+                "amountInMicros": 9990000,
+                "currencyCode": "EUR"
+              },
+              "giftable": true
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.de/books/download/Raumpatrouille-sample-epub.acsm?id=zAgxDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.de/books/download/Raumpatrouille-sample-pdf.acsm?id=zAgxDAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=zAgxDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Streifzüge im Astronautenkostüm Dieses Buch ist eine herrliche Überraschung: Matthias Brandt zeigt mit seinem literarischen Debüt, dass er nicht nur ein herausragender Schauspieler, sondern auch ein bemerkenswerter Autor ist."
+        }
+      }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "uoZwU0EyVDcC",
+        "etag": "ZqKvvlNgNMU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/uoZwU0EyVDcC",
+        "volumeInfo": {
+          "title": "Serendipities",
+          "subtitle": "Language & Lunacy",
+          "authors": [
+            "Umberto Eco"
+          ],
+          "publisher": "Houghton Mifflin Harcourt",
+          "publishedDate": "1999",
+          "description": "See:",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "0156007517"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9780156007511"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 129,
+          "printType": "BOOK",
+          "categories": [
+            "Literary Collections"
+          ],
+          "averageRating": 4,
+          "ratingsCount": 9,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.3.2.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=uoZwU0EyVDcC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=uoZwU0EyVDcC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.de/books?id=uoZwU0EyVDcC&dq=isbn:9780156007511&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.de/books?id=uoZwU0EyVDcC&dq=isbn:9780156007511&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Serendipities.html?hl=&id=uoZwU0EyVDcC"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=uoZwU0EyVDcC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "See:"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "vmaqbR1UKhkC",
+        "etag": "v+i5Kkp+zvo",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/vmaqbR1UKhkC",
+        "volumeInfo": {
+          "title": "Imperium (Book One)",
+          "authors": [
+            "Robert Harris"
+          ],
+          "publisher": "Random House",
+          "publishedDate": "2007",
+          "description": "When Tiro, the confidential secretary of a Roman senator, opens the door to a terrified stranger on a cold November morning, he sets in motion a chain of events which will eventually propel his master into one of the most famous courtroom dramas in histor",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780099406310"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0099406314"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 480,
+          "printType": "BOOK",
+          "categories": [
+            "Cicero, Marcus Tullius"
+          ],
+          "averageRating": 4,
+          "ratingsCount": 63,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.7.4.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=vmaqbR1UKhkC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=vmaqbR1UKhkC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.de/books?id=vmaqbR1UKhkC&dq=isbn:9780099406310&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.de/books?id=vmaqbR1UKhkC&dq=isbn:9780099406310&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Imperium_Book_One.html?hl=&id=vmaqbR1UKhkC"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=vmaqbR1UKhkC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "When Tiro, the confidential secretary of a Roman senator, opens the door to a terrified stranger on a cold November morning, he sets in motion a chain of events which will eventually propel his master into one of the most famous courtroom ..."
+        }
+      }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "4ksOuiIid5EC",
+        "etag": "RUkDvapjBdk",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/4ksOuiIid5EC",
+        "volumeInfo": {
+          "title": "Here Comes Everybody",
+          "subtitle": "How Change Happens when People Come Together",
+          "authors": [
+            "Clay Shirky"
+          ],
+          "publisher": "Penguin UK",
+          "publishedDate": "2009-02-05",
+          "description": "Welcome to the new future of involvement. Forming groups is easier than it�s ever been: unpaid volunteers can build an encyclopaedia together in their spare time, mistreated customers can join forces to get their revenge on airlines and high street banks, and one man with a laptop can raise an army to help recover a stolen phone. The results of this new world of easy collaboration can be both good (young people defying an oppressive government with a guerrilla ice-cream eating protest) and bad (girls sharing advice for staying dangerously skinny) but it�s here and, as Clay Shirky shows, it�s affecting � well, everybody. For the first time, we have the tools to make group action truly a reality. And they�re going to change our whole world.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780141030623"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0141030623"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": false
+          },
+          "pageCount": 344,
+          "printType": "BOOK",
+          "categories": [
+            "Business & Economics"
+          ],
+          "averageRating": 4,
+          "ratingsCount": 26,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.5.2.0.preview.2",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=4ksOuiIid5EC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=4ksOuiIid5EC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.de/books?id=4ksOuiIid5EC&dq=isbn:9780141030623&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.de/books?id=4ksOuiIid5EC&dq=isbn:9780141030623&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Here_Comes_Everybody.html?hl=&id=4ksOuiIid5EC"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=4ksOuiIid5EC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "The results of this new world of easy collaboration can be both good (young people defying an oppressive government with a guerrilla ice-cream eating protest) and bad (girls sharing advice for staying dangerously skinny) but it s here and ..."
+        }
+      }
+    ]
+  }
+]
