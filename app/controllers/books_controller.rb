@@ -1,6 +1,9 @@
 class BooksController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
+
   def show
     @book = Book.find(params[:id])
+    authorize @book # authorize @book for pundit
     # @book = Book.last # FOR TESTING => delete late
     district = "Friedrichshain"
     @locations = Location.where("district = ?", "#{district}")

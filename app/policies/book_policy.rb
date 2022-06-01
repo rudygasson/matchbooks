@@ -4,5 +4,9 @@ class BookPolicy < ApplicationPolicy
     # def resolve
     #   scope.all
     # end
+
+    def show?
+      record.user == user
+    end
   end
 end
