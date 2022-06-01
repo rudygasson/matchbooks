@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
     @search_district = params[:district]
@@ -7,9 +7,9 @@ class PagesController < ApplicationController
     sql_query = "title ILIKE :query OR author ILIKE :query"
     if @search_term
       @filtered_by_query = Book.where(sql_query, query: "%#{@search_term}%")
-      @filtered_books = @filtered_by_query.select { |book| book_districts(book).include?(search_district.downcase) }
-    # else
-    #   @filtered_books = @filtered_by_query.select { |book| book_districts(book).include?("neukölln") }
+      @filtered_books = @filtered_by_query.select { |book| book_districts(book).include?(@search_district.downcase) }
+    else
+      @filtered_books = Book.all.select { |book| book_districts(book).include?("neukölln") }
     end
   end
 
