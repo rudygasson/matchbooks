@@ -1,7 +1,45 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+puts "Add 5 Users..."
+5.times do
+  User.create!(Faker::Internet.user('username', 'email').merge(password: "123456"))
+end
+
+puts "Add 4 Locations in Neukölln and 1 in Kreuzberg..."
+4.times do
+  Location.create!(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.street_address,
+    district: "Neukölln",
+    zipcode: 12_043
+  )
+end
+Location.create!(
+  name: Faker::Restaurant.name,
+  address: Faker::Address.street_address,
+  district: "Friedrichshain-Kreuzberg",
+  zipcode: 10_997
+)
+
+puts "Add books from test_books.json..."
+file = File.read('test/test_books.json')
+test_books = JSON.parse(file)
+
+test_books.each do |test_book|
+  book = BookDataHelper.extract_book(test_book)
+  book.save
+end
+
+puts "Connect users to random locations..."
+User.all.each do |user|
+  3.times do
+    location = Location.find(Location.ids.sample)
+    user.locations << location unless user.locations.include? location
+  end
+end
+
+puts "Connect users to books through copies..."
+User.all.each do |user|
+  4.times do
+    book = Book.find(Book.ids.sample)
+    user.books << book unless user.books.include? book
+  end
+end

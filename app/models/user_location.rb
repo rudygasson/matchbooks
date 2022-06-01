@@ -1,5 +1,5 @@
 class UserLocation < ApplicationRecord
-  belongs_to :user
-  belongs_to :location
-  validates_uniqueness_of :location_id, { scope: :user_id }
+  belongs_to :user, dependent: :destroy
+  belongs_to :location, dependent: :destroy
+  validates_uniqueness_of :location, { scope: :user }
 end
