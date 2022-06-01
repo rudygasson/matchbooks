@@ -26,17 +26,17 @@
     <% end %>
     <br>
     <div class="row">
-        <%# @filtered_books.reverse.each do |book| %>
+        <% @filtered_books.reverse.each do |book| %>
           <%#= link_to book_path(book) do %>
             <div class="card my-1">
-              <img src="<%#= book.thumbnail %>" alt="book card">
+              <img src="<%= book.thumbnail %>" alt="book card">
               <div class="card">
-                <h2><strong><%#= "#{book.author} - #{book.title}"%></strong></h5>
-                <p><%#= book.description %></p>
+                <h2><strong><%= "#{book.title}"%></strong></h5>
+                <p><%= book.author %></p>
               </div>
             </div>
           <%# end %>
-        <%# end %>
+        <% end %>
     </div>
   </div>
 </div>
