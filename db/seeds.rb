@@ -15,7 +15,7 @@ end
 Location.create!(
   name: Faker::Restaurant.name,
   address: Faker::Address.street_address,
-  district: "Kreuzberg",
+  district: "Friedrichshain-Kreuzberg",
   zipcode: 10_997
 )
 
