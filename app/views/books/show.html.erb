@@ -1,0 +1,22 @@
+<div class="container p-3 text-center">
+  <div class="container">
+    <img src=<%= @book.cover_image %> alt="book cover">
+    <h1><%= @book.title %></h1>
+    <span>by:</span>
+    <p><%= @book.author %></p>
+    <span>Description:</span>
+    <p><%= @book.description %></p>
+    <span>Published:</span>
+    <p><%= @book.year %></p>
+    <span>ISBN:</span>
+    <p><%= @book.isbn %></p>
+  </div>
+  <div class="container">
+    <% @locations.each do |location| %>
+      <p><%= location.name %></p>
+      <% @users.each do |user| %>
+        <span><%= user.email %></span>
+      <% end %>
+    <% end %>
+  </div>
+</div>
