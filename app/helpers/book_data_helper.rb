@@ -1,5 +1,6 @@
-module ApplicationHelper
-  def extract_book(gdata)
+module BookDataHelper
+  def self.extract_book(gdata)
+    book = Book.new
     g_id = gdata["items"][0]["id"]
     vol = gdata["items"][0]["volumeInfo"]
     book.isbn = vol["industryIdentifiers"][0]["identifier"]
@@ -9,7 +10,6 @@ module ApplicationHelper
     book.year = vol["publishedDate"].slice(0, 4).to_i
     book.thumbnail = vol["imageLinks"]["thumbnail"]
     book.cover_image = "https://books.google.com/books/content/images/frontcover/#{g_id}?fife=w480-h960"
-
-    Book.new(book)
+    book
   end
 end

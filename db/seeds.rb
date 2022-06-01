@@ -6,28 +6,36 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# puts "Add 5 Users..."
+puts "Add 5 Users..."
+5.times do
+  user = Faker::Internet.user('username', 'email')
+  user = User.new(user)
+  user.password = "123456"
+  user.save!
+end
 
-# 5.times do
-#   user = Faker::Internet.user('username', 'email')
-#   user.password = "123456"
-#   User.create!(user)
-# end
+puts "Add 5 Locations in Neukölln and 1 in Kreuzberg..."
+5.times do
+  location = Location.new(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.street_address,
+    district: "Neukölln",
+    zipcode: 12_043
+  )
+  location.save!
+end
+Location.create!(
+  name: Faker::Restaurant.name,
+  address: Faker::Address.street_address,
+  district: "Kreuzberg",
+  zipcode: 10_997
+)
 
-# puts "Add 5 Locations in 2 districts..."
-
-# 5.times do
-#   location = Location.new(
-#     name: Faker::Restaurant.name,
-#     address: Faker::Address.street_address,
-#     district: ["Neukölln", "Kreuzberg"].sample,
-#     zipcode: 10_997
-#   )
-#   location.save!
-# end
-
-puts "Add 5 books..."
+puts "Add books from test_books.json ..."
 file = File.read('test/test_books.json')
-books = JSON.parse(file)
+test_books = JSON.parse(file)
 
-p books[0]['items']
+test_books.each do |test_book|
+  book = BookDataHelper.extract_book(test_book)
+  book.save
+end
