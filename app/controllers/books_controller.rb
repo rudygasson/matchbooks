@@ -4,6 +4,7 @@ class BooksController < ApplicationController
     # @book = Book.last # FOR TESTING => delete late
     district = "Friedrichshain"
     @locations = Location.where("district = ?", "#{district}")
+
     ## AREA 51 ##
     # @location_condition = @locations.map.with_index() { |_, index| "location_id = #{index}" }.join(" OR ")
     # # get instances of ULs that are in the area
