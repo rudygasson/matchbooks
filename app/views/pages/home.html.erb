@@ -1,2 +1,42 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h1 class="text-center">Matchbooks</h1>
+  <h2 class="text-center">Find books in your area</h2>
+  <div class="container">
+    <div class="row mx-auto col-md-6">
+      <%= form_tag root_path, method: :get, class: "d-flex" do %>
+        <%= select_tag "district", options_for_select(%w[Charlottenburg-Wilmersdorf Friedrichshain-Kreuzberg Lichtenberg Marzahn-Hellersdorf Mitte Neukölln Pankow Reinickendorf Spandau Steglitz-Zehlendorf Tempelhof-Schöneberg Treptow-Köpenick], "Neukölln") %>
+        <%= text_field_tag :query,
+                            params[:query],
+                            class: "form-control",
+                            placeholder: "Search by author or title",
+                            required: true %>
+        <%= button_tag class: "btn btn-success" do %>
+          <i class='fas fa-search'></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="container">
+    <% if @search_term.nil? %>
+      <h3 class="text-center">Latest books in Neukölln</h3>
+    <% else %>
+      <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %></h3>
+    <% end %>
+    <br>
+    <div class="row">
+        <%# <% @filtered_books.reverse.each do |book| %> %>
+          <%# <%= link_to book_path(book) do %> %>
+            <%# <div class="card my-1"> %>
+              <%# <img src="<%= book.thumbnail %>" alt="book card"> %>
+              <%# <div class="card"> %>
+                <%# <h2><strong><%= "#{book.author} - #{book.title}"%></strong></h5> %>
+                <%# <p><%= book.description %></p> %>
+              <%# </div> %>
+            <%# </div> %>
+          <%# <% end %> %>
+        <%# <% end %> %>
+    </div>
+  </div>
+</div>

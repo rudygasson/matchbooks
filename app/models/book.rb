@@ -1,5 +1,6 @@
 class Book < ApplicationRecord
   has_many :copies
+  has_many :users, through: :copies
   validates :isbn, :title, :author, :year, presence: true
   validates :isbn, length: { in: 10..13 }
   validates :year, length: { is: 4 }
