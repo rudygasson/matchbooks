@@ -8,11 +8,9 @@ class PagesController < ApplicationController
     if @search_term
       @filtered_by_query = Book.where(sql_query, query: "%#{@search_term}%")
       @filtered_books = @filtered_by_query.select { |book| book_districts(book).include?(search_district.downcase) }
-    end
-
-    # if @search_term.nil?
+    # else
     #   @filtered_books = @filtered_by_query.select { |book| book_districts(book).include?("neukölln") }
-    # end
+    end
   end
 
   private
