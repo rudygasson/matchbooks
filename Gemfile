@@ -79,6 +79,6 @@ group :test do
   gem "webdrivers"
 end
 
-
 # my gems
 gem 'httparty'
+gem "pundit"
