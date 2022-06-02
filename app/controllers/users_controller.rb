@@ -13,4 +13,12 @@ class UsersController < ApplicationController
       }
     end
   end
+
+  def destroy
+    @user_location = UserLocation.find(params[:id])
+    authorize @user_location
+    @user_location.destroy
+    # redirect to user profile
+    redirect_to user_path, status: :see_other
+  end
 end
