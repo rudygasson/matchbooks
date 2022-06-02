@@ -1,6 +1,7 @@
 class MeetingsController < ApplicationController
   def new
-    @deliverer = User.find(1)
+    @copy = Copy.find(params[:copy])
+    @deliverer = @copy.user
     @receiver = current_user
     @location = Location.find(params[:location])
     @meeting = Meeting.new
