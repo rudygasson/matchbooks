@@ -7,7 +7,13 @@
   <p><%= @user.email %></p>
   <hr>
   <h3>My locations:</h3>
+  <div  id='map'
+        style='width: 100%; height: 300px;'
+        data-controller="map"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+        data-map-markers-value="<%= @markers.to_json %>"></div>
   <br>
+  <%= link_to "Add location", new_copy_path, class: "btn btn-success mb-3" %>
   <% if @user_locations.count == 0 %>
     <p>You currently have no locations</p>
   <% else %>
@@ -19,7 +25,6 @@
         <%# link_to "Delete", location_path(user_location), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       <% end %>
     </div>
-  <%= link_to "Add location", new_copy_path, class: "btn btn-success" %>
   <% end %>
 </div>
 <%# <div class='container'> %>
