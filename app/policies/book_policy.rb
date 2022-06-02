@@ -4,9 +4,17 @@ class BookPolicy < ApplicationPolicy
     # def resolve
     #   scope.all
     # end
+  end
 
-    def show?
-      record.user == user
-    end
+  def show?
+    true
+  end
+
+  def create?
+    true
+  end
+
+  def new?
+    create?
   end
 end

@@ -5,22 +5,21 @@ class CopyPolicy < ApplicationPolicy
       # user.admin? ? scope.all : scope.where(user: user)
       scope.where(user: user)
     end
+  end
 
-    def index?
-      record.user == user
-    end
+  def index?
+    true
+  end
 
-    def new?
-      true
-    end
+  def create?
+    true
+  end
 
-    def create?
-      true
-    end
+  def new?
+    create?
+  end
 
-    def destroy?
-      record.user == user
-      # true
-    end
+  def destroy?
+    record.user == user
   end
 end

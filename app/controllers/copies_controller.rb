@@ -4,13 +4,12 @@ class CopiesController < ApplicationController
   def index
     @user = current_user
     @copies = @user.copies
-    # authorize @copies
-    @copies = policy_scope(Copy)
+    @copies = policy_scope(Copy) # pundit
   end
 
   def new
     @book = Book.new
-    authorize @book
+    authorize @book # pundit
   end
 
   def create
@@ -25,7 +24,7 @@ class CopiesController < ApplicationController
     # if no book was found via API => render :new
     if book.nil?
       @book = Book.new
-      authorize @book
+      authorize @book # pundit
       render(:new, status: :unprocessable_entity)
     # if a book was found via API => create copy
     else
@@ -33,7 +32,7 @@ class CopiesController < ApplicationController
       @copy = Copy.new
       @copy.user = current_user
       @copy.book = book
-      authorize @copy
+      authorize @copy # pundit
       if @copy.save
         # redirect to user library
         redirect_to copies_path

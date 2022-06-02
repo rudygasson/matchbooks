@@ -1,7 +1,7 @@
 <div class="container p-3 text-center">
   <div class="container">
     <img src=<%= @book.cover_image %> alt="book cover">
-    <h1><%= @book.title %></h1>
+    <h2><%= @book.title %></h2>
     <span>by:</span>
     <p><%= @book.author %></p>
     <span>Description:</span>
@@ -11,12 +11,19 @@
     <span>ISBN:</span>
     <p><%= @book.isbn %></p>
   </div>
+  <hr>
   <div class="container">
-    <% @locations.each do |location| %>
-      <p><%= location.name %></p>
-      <% @users.each do |user| %>
-        <span><%= user.email %></span>
-      <% end %>
+    <h1>Locations:</h1>
+    <% @locations_uniq.each do |location| %>
+      <div class="container mb-3">
+        <h4 class="m-0"><%= location.name %></h4>
+        <%# show users that offer the book at this location %>
+        <p class="m-0">Set up a meeting with:</p>
+        <% location.users.each do |user| %>
+          <%= link_to user.username, new_meeting_path %>
+        <% end %>
+      </div>
     <% end %>
+
   </div>
 </div>

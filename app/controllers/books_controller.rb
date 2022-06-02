@@ -4,19 +4,21 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     authorize @book # authorize @book for pundit
-    # @book = Book.last # FOR TESTING => delete late
-    district = "Friedrichshain"
-    @locations = Location.where("district = ?", "#{district}")
+    # get users that have the selected book
+    @book_users = @book.users
+    # match book users with selected district, e. g. "Neukölln"
+    @locations = []
+    @book_users.each do |book_user|
+      @locations += book_user.locations.select { |location| location.district == "Neukölln"}
+    end
+    # get distinct list of locations where users are willing to meet
+    @locations_uniq = @locations.map { |location| location }.uniq
+    # get distinct list of users that have the book and are willing to meet at the locations
+    # @book_users_at_location = @locations_uniq.map { |location| location.users }
+    # raise
 
-    ## AREA 51 ##
-    # @location_condition = @locations.map.with_index() { |_, index| "location_id = #{index}" }.join(" OR ")
-    # # get instances of ULs that are in the area
-    # @user_locations = UserLocation.where(@location_condition)
-    # # create array with users that are in the area
-    # @user_array = @user_locations.map { |ul| ul.user_id }.uniq
-    # @user_condition = @user_array.map.with_index(1) { |_, index| "user_id = #{index}" }.join(" OR ")
-    # # find users with copies that are in the area
-    # @user_copies_in_area = Copy.where(@user_condition)
-    # # find users with copies that are in the areaand have the book of interest
+    ###### params to parse #####
+    # 1) copy_id
+    # 2) location
   end
 end
