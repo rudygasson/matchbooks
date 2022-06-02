@@ -14,19 +14,22 @@
   <hr>
   <div class="container">
     <h1>Locations:</h1>
-    <% @locations_uniq.each do |location| %>
-      <div class="container mb-3">
-        <h4 class="m-0"><%= location.name %></h4>
-        <%# show users that offer the book at this location %>
-        <p class="m-0">Set up a meeting with:</p>
-        <% location.users.each do |user| %>
-          <% if (user.copies.find_by book_id: params[:id]) %>
-            <%# link_to user.username, new_meeting_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
-            <%= link_to user.username, copies_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
+    <% if @locations_uniq.empty? %>
+      <p><em>Sorry, but this book is currently not available...</em></p>
+    <% else %>
+      <% @locations_uniq.each do |location| %>
+        <div class="container mb-3">
+          <h4 class="m-0"><%= location.name %></h4>
+          <%# show users that offer the book at this location %>
+          <p class="m-0">Set up a meeting with:</p>
+          <% location.users.each do |user| %>
+            <% if (user.copies.find_by book_id: params[:id]) %>
+              <%# link_to user.username, new_meeting_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
+              <%= link_to user.username, copies_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     <% end %>
-
   </div>
 </div>
