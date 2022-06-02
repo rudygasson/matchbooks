@@ -4,12 +4,13 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     authorize @book # authorize @book for pundit
+    @search_district = params[:district]
     # get users that have the selected book
     @book_users = @book.users
     # match book users with selected district, e. g. "Neukölln"
     @locations = []
     @book_users.each do |book_user|
-      @locations += book_user.locations.select { |location| location.district == "Neukölln"}
+      @locations += book_user.locations.select { |location| location.district == @search_district}
     end
     # get distinct list of locations where users are willing to meet
     @locations_uniq = @locations.map { |location| location }.uniq

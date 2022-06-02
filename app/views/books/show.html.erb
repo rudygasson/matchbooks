@@ -20,7 +20,8 @@
         <%# show users that offer the book at this location %>
         <p class="m-0">Set up a meeting with:</p>
         <% location.users.each do |user| %>
-          <%= link_to user.username, new_meeting_path %>
+          <%= link_to user.username, new_meeting_path(district: params[:district], copy_id: params[:copy_id]) %>
+          <%# link_to user.username, copies_path(district: params[:district], copy_id: params[:copy_id]) %>
         <% end %>
       </div>
     <% end %>

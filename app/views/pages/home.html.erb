@@ -27,7 +27,7 @@
     <br>
     <div class="row">
         <% @filtered_books.reverse.each do |book| %>
-          <%= link_to book_path(book), class: "card-book my-1" do %>
+          <%= link_to book_path(book, district: params[:district]), class: "card-book my-1" do %>
               <img src="<%= book.thumbnail %>" alt="book card">
               <div class="card-book-infos">
                 <h2><%= "#{book.title}"%></h2>
