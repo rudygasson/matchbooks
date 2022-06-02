@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row mx-auto">
       <%= form_tag root_path, method: :get, class: "d-flex" do %>
-        <%= select_tag "district", options_for_select(["All areas", "Charlottenburg-Wilmersdorf", "Friedrichshain-Kreuzberg", "Lichtenberg", "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Treptow-Köpenick"], params[:district].nil? ? "All areas" : params[:district]), {class: "col-4"} %>
+        <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-4"} %>
         <%= text_field_tag :query,
                             params[:query],
                             class: "form-control",
@@ -31,7 +31,7 @@
     <div class="row">
       <% if @filtered_books.count > 0 %>
         <% @filtered_books.reverse.each do |book| %>
-          <%= link_to book_path(book), class: "card-book my-1 p-1" do %>
+          <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
               <img src="<%= book.thumbnail %>" alt="book card">
               <div class="card-book-infos">
                 <h2><%= "#{book.title}"%></h2>

@@ -15,6 +15,7 @@ class PagesController < ApplicationController
     else
       @filtered_books = Book.all
     end
+    @districts = ["All areas", "Charlottenburg-Wilmersdorf", "Friedrichshain-Kreuzberg", "Lichtenberg", "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Treptow-Köpenick"]
   end
 
   private
