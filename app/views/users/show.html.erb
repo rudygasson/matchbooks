@@ -1,0 +1,27 @@
+<div class="container mt-3 text-center">
+  <h1>Profile</h1>
+  <img src="https://avatars.githubusercontent.com/u/2715405?v=4" alt="Avatar" class="avatar-xl mb-4">
+  <h5>Username:</h5>
+  <p><%= @user.username %></p>
+  <h5>Email:</h5>
+  <p><%= @user.email %></p>
+  <hr>
+  <h3>My locations:</h3>
+  <br>
+  <% if @user_locations.count == 0 %>
+    <p>You currently have no locations</p>
+  <% else %>
+    <div class="container mb-2">
+      <% @user_locations.each do |user_location| %>
+        <h4 class="mb-1"><%= user_location.location.name %></h4>
+        <p class="m-0"><%= user_location.location.address %>, <%= user_location.location.zipcode %> Berlin</p>
+        <p><%= user_location.location.district %></p>
+        <%# link_to "Delete", location_path(user_location), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </div>
+  <%= link_to "Add location", new_copy_path, class: "btn btn-success" %>
+  <% end %>
+</div>
+<%# <div class='container'> %>
+  <%#= link_to "Add location", new_location_path, class: "btn btn-flat-add" %>
+<%# </div> %>
