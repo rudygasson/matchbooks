@@ -9,9 +9,9 @@ class BooksController < ApplicationController
     # match book users with selected district, e. g. "Neukölln"
     @locations = []
     # check if params[:district] was passed
-    if params[:district].nil?
+    if params[:district].nil? || params[:district] == "All areas"
       @book_users.each do |book_user|
-        @locations += book_user.locations.select { |location| location }
+        @locations += book_user.locations
       end
     else
       @search_district = params[:district]
