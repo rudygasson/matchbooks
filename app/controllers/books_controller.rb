@@ -4,7 +4,12 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     authorize @book # authorize @book for pundit
-    @search_district = params[:district]
+
+    if params[:district].nil?
+      @search_district = ""
+    else
+      @search_district = params[:district]
+    end
     # get users that have the selected book
     @book_users = @book.users
     # match book users with selected district, e. g. "Neukölln"
