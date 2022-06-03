@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :copies, only: %i[index new create destroy]
   resources :books, only: %i[show]
   resources :users, only: %i[show destroy]
+  resources :meetings, only: %i[new create]
 end
