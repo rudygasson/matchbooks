@@ -9,8 +9,9 @@
     <%= simple_form_for @meeting do |f| %>
       <%= f.input :date, as: :date, html5: true %>
       <%= f.input :time, as: :time, html5: true %>
-      <%= hidden_field_tag 'copy', @copy %>
-      <%= hidden_field_tag 'deliverer', @deliverer %>
+      <%= hidden_field_tag 'copy', @copy.id %>
+      <%= hidden_field_tag 'deliverer', @deliverer.id %>
+      <%= hidden_field_tag 'location', @location.id %>
       <%= f.submit "Request", class: "btn btn-success" %>
     <% end %>
   </div>

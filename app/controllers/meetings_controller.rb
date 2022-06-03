@@ -9,24 +9,32 @@ class MeetingsController < ApplicationController
   end
 
   def create
+    @copy = Copy.find(params[:copy])
+    @deliverer = User.find(params[:deliverer])
+    @location = Location.find(params[:location])
+
     @meeting = Meeting.new(meeting_params)
     @meeting.location = @location
     authorize @meeting
 
-    @copy = meeting_params[:copy]
-    @deliverer = meeting_params[:deliverer]
+    # @handover = Handover.new({
+    #   copy: @copy,
+    #   status: :pending
+    # })
+    # authorize @handover
 
-    @handover = Handover.new({
-      copy: @copy,
-      receiver_id: current_user,
-      deliverer: @deliverer,
-      status: :pending
-    })
-    authorize @handover
+    # @handover.receiver = current_user
+    # @handover.deliverer = @deliverer
+
+    # if @meeting.save
+    #   @handover.meeting = @meeting
+    # else
+    #   flash.alert = "meeting.save failed"
+    # end
 
     if @meeting.save
-      @handover.meeting = @meeting
-      redirect_to meetings_path(@meeting, @handover) if @handover.save
+      redirect_to root_path
+      # redirect_to meetings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -35,6 +43,6 @@ class MeetingsController < ApplicationController
   private
 
   def meeting_params
-    params.require(:meeting).permit(:date, :time, :copy, :deliverer)
+    params.require(:meeting).permit(:date, :time)
   end
 end
