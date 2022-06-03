@@ -82,3 +82,4 @@ end
 # my gems
 gem 'httparty'
 gem "pundit"
+gem "geocoder"
