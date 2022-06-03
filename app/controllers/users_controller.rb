@@ -19,6 +19,6 @@ class UsersController < ApplicationController
     authorize @user_location
     @user_location.destroy
     # redirect to user profile
-    redirect_to user_path, status: :see_other
+    redirect_to user_path(current_user), status: :see_other
   end
 end

@@ -13,7 +13,7 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-markers-value="<%= @markers.to_json %>"></div>
   <br>
-  <%= link_to "Add location", new_copy_path, class: "btn btn-success mb-3" %>
+  <%# link_to "Add location", new_copy_path, class: "btn btn-success mb-3" %>
   <% if @user_locations.count == 0 %>
     <p>You currently have no locations</p>
   <% else %>
