@@ -1,2 +1,23 @@
-<h1>Meetings#index</h1>
-<p>Find me in app/views/meetings/index.html.erb</p>
+<div class="container">
+  <h1>My meetings:</h1>
+
+  <div class="row">
+      <% if @meetings.count > 0 %>
+        <% @meetings.reverse.each do |book| %>
+          <div class: "card-book my-1 p-1">
+            <img src="<%= %>" alt="map">
+            <div class="card-book-infos">
+              <h2><%= "#{meeting.date} #{meeting.time}" %></h2>
+              <p><%= meeting.status %></p>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-center"><em>There aren't any meetings scheduled for now.</em></p>
+      <% end %>
+    </div>
+
+
+
+
+</div>
