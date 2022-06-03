@@ -3,7 +3,7 @@ class MeetingsController < ApplicationController
     @meetings = policy_scope(Meeting)
     @handovers = []
     @meetings.each do |meeting|
-      @handovers.push(meeting.handovers)
+      @handovers += meeting.handovers
     end
   end
 end
