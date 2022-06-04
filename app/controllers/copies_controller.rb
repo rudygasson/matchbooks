@@ -67,9 +67,14 @@ class CopiesController < ApplicationController
       book.author = result["items"][0]["volumeInfo"]["authors"][0]
       book.description = result["items"][0]["volumeInfo"]["description"]
       book.year = result["items"][0]["volumeInfo"]["publishedDate"].slice(0, 4).to_i
-      book.thumbnail = result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-      id = result["items"][0]["id"]
-      book.cover_image = "https://books.google.com/books/content/images/frontcover/#{id}?fife=w480-h960"
+      if result["items"][0]["volumeInfo"]["imageLinks"].nil?
+        book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
+        book.cover_image = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
+      else
+        book.thumbnail = result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+        id = result["items"][0]["id"]
+        book.cover_image = "https://books.google.com/books/content/images/frontcover/#{id}?fife=w480-h960"
+      end
       # clarify if we want to add genre / category
       # book.category = result["items"][0]["volumeInfo"]["categories"][0]
       book
