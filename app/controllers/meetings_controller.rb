@@ -2,7 +2,15 @@ class MeetingsController < ApplicationController
   def show
     @meeting = Meeting.find(params[:id])
     authorize @meeting # authorize @meeting for pundit
-    # @handover = Handover.find(params[:id])
+    @location = @meeting.location
+    @handovers = Handover.where(meeting_id: @meeting)
+    @receiver = User.find(@handovers[0].receiver_id)
+    @deliverer = User.find(@handovers[0].deliverer_id)
+    @markers = [{
+      lat: @location.latitude,
+      lng: @location.longitude
+    }]
+    # raise
   end
 
   def new
