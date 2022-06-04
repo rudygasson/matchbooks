@@ -1,4 +1,10 @@
 class MeetingsController < ApplicationController
+  def show
+    @meeting = Meeting.find(params[:id])
+    authorize @meeting # authorize @meeting for pundit
+    # @handover = Handover.find(params[:id])
+  end
+
   def new
     @copy = Copy.find(params[:copy])
     @deliverer = @copy.user
@@ -17,25 +23,21 @@ class MeetingsController < ApplicationController
     @meeting.location = @location
     authorize @meeting
 
-    # @handover = Handover.new({
-    #   copy: @copy,
-    #   status: :pending
-    # })
-    # authorize @handover
-
-    # @handover.receiver = current_user
-    # @handover.deliverer = @deliverer
-
-    # if @meeting.save
-    #   @handover.meeting = @meeting
-    # else
-    #   flash.alert = "meeting.save failed"
-    # end
-
     if @meeting.save
-      redirect_to root_path
-      # redirect_to meetings_path
+      # only after a meeting was saved, we can assign a meeting_id to handover
+      @handover = Handover.new
+      @handover.meeting_id = @meeting.id
+      @handover.copy_id = @copy.id
+      @handover.receiver_id = current_user.id
+      @handover.deliverer_id = @deliverer.id
+      if @handover.save
+        redirect_to meeting_path(@meeting)
+      else
+        flash.alert = "Error - Saving of handover failed"
+        render :new, status: :unprocessable_entity
+      end
     else
+      flash.alert = "Error - Saving of meeting failed"
       render :new, status: :unprocessable_entity
     end
   end
