@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :copies, only: %i[index new create destroy]
   resources :books, only: %i[show]
-  resources :meetings, only: %i[index]
+  resources :users, only: %i[show destroy]
+  resources :meetings, only: %i[index new create]
 end

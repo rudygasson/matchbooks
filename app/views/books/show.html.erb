@@ -1,9 +1,8 @@
 <div class="container p-3 text-center">
-  <div class="container">
-    <img src=<%= @book.cover_image %> alt="book cover">
+  <div class="book-cover">
+    <img src=<%= @book.cover_image %> alt="book cover" class="mb-3">
     <h2><%= @book.title %></h2>
-    <span>by:</span>
-    <p><%= @book.author %></p>
+    <p>by <%= @book.author %></p>
     <span>Description:</span>
     <p><%= @book.description %></p>
     <span>Published:</span>
@@ -24,8 +23,7 @@
           <p class="m-0">Set up a meeting with:</p>
           <% location.users.each do |user| %>
             <% if (user.copies.find_by book_id: params[:id]) %>
-              <%# link_to user.username, new_meeting_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
-              <%= link_to user.username, copies_path(location_id: location.id, copy_id: (user.copies.find_by book_id: params[:id]).id) %>
+              <%= link_to user.username, new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])) %>
             <% end %>
           <% end %>
         </div>

@@ -1,4 +1,4 @@
-class UserLocationPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -7,19 +7,7 @@ class UserLocationPolicy < ApplicationPolicy
     end
   end
 
-  def index?
+  def show?
     true
-  end
-
-  def create?
-    true
-  end
-
-  def new?
-    create?
-  end
-
-  def destroy?
-    record.user == user
   end
 end
