@@ -1,10 +1,6 @@
 class MeetingsController < ApplicationController
   def index
-    @meetings = policy_scope(Meeting)
-    @handovers = []
-    @meetings.each do |meeting|
-      @handovers += meeting.handovers
-    end
+    @meetings = policy_scope(Meeting).includes(:location, handovers: :deliverer)
   end
 
   def new
@@ -25,8 +21,19 @@ class MeetingsController < ApplicationController
     authorize @meeting
 
     if @meeting.save
-      redirect_to meetings_path
+      @handover = Handover.new
+      @handover.meeting = @meeting
+      @handover.copy = @copy
+      @handover.receiver = current_user
+      @handover.deliverer = @deliverer
+      if @handover.save
+        redirect_to meetings_path
+      else
+        flash.alert = "Error - Saving of handover failed"
+        render :new, status: :unprocessable_entity
+      end
     else
+      flash.alert = "Error - Saving of meeting failed"
       render :new, status: :unprocessable_entity
     end
   end

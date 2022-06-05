@@ -3,11 +3,13 @@
 
   <div class="row">
     <% if @meetings.count > 0 %>
-      <% @meetings.reverse.each do |book| %>
-        <div class: "card-book my-1 p-1">
-          <img src="https://www.google.com/maps/d/thumbnail?mid=1vBbLJyEi7CrO3P8EsRPuiw1kCyY&hl=en" alt="map">
+      <% @meetings.each do |meeting| %>
+        <div class="card-book my-1 p-1">
+          <% user = meeting.handovers[0].deliverer %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.id}", class: "avatar-bordered" %>
           <div class="card-book-infos">
-            <h2><%= "#{meeting.date} #{meeting.time}" %></h2>
+            <h2><%= user.username %></h2>
+            <p><%= "#{meeting.date} #{meeting.time.hour}:#{meeting.time.min}" %> at <%= meeting.location.name %></p>
             <p><%= meeting.status %></p>
           </div>
         </div>
