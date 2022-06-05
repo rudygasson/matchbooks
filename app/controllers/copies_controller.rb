@@ -53,31 +53,15 @@ class CopiesController < ApplicationController
   private
 
   def make_google_books_request(book_params, isbn)
-    # create new Book instance
-    book = Book.new(book_params)
     # get json from Google Books API
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}&maxResults=1"
     response = HTTParty.get(url)
     # convert response to JSON
-    result = response.parsed_response
+    google_json = response.parsed_response
     # if no isbn can be found
-    if result['totalItems'] > 0
-      # extract book parameters
-      book.title = result["items"][0]["volumeInfo"]["title"]
-      book.author = result["items"][0]["volumeInfo"]["authors"][0]
-      book.description = result["items"][0]["volumeInfo"]["description"]
-      book.year = result["items"][0]["volumeInfo"]["publishedDate"].slice(0, 4).to_i
-      if result["items"][0]["volumeInfo"]["imageLinks"].nil?
-        book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
-        book.cover_image = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
-      else
-        book.thumbnail = result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-        id = result["items"][0]["id"]
-        book.cover_image = "https://books.google.com/books/content/images/frontcover/#{id}?fife=w480-h960"
-      end
-      # clarify if we want to add genre / category
-      # book.category = result["items"][0]["volumeInfo"]["categories"][0]
-      book
+    if google_json['totalItems'] > 0
+      # create new Book instance
+      BookDataHelper.extract_book(google_json, book_params)
     else
       nil
     end
