@@ -10,6 +10,8 @@ class MeetingsController < ApplicationController
       lat: @location.latitude,
       lng: @location.longitude
     }]
+    @chatroom = Chatroom.find_by(meeting_id: @meeting)
+    @message = Message.new
     # raise
   end
 
@@ -32,7 +34,8 @@ class MeetingsController < ApplicationController
     authorize @meeting
 
     if @meeting.save
-      # only after a meeting was saved, we can assign a meeting_id to handover
+      # only after a meeting was saved, we can assign a meeting_id to chatroom and handover
+      @chatroom = Chatroom.create(meeting_id: @meeting.id)
       @handover = Handover.new
       @handover.meeting_id = @meeting.id
       @handover.copy_id = @copy.id
