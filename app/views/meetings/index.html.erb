@@ -4,7 +4,7 @@
   <div class="row">
     <% if @meetings.count > 0 %>
       <% @meetings.each do |meeting| %>
-        <%= link_to meeting_path(meeting, meeting_id: params[:id]), class: "card-book my-1 p-1" do %>
+        <%= link_to meeting_path(meeting), class: "card-book my-1 p-1" do %>
           <% user = meeting.handovers[0].deliverer %>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.id}", class: "avatar-bordered" %>
           <div class="card-book-infos">
