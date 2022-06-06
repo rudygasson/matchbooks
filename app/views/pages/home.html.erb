@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row mx-auto">
       <%= form_tag root_path, method: :get do %>
-        <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-12 form-select"} %>
+          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-12 form-select"} %>
         <div class="d-flex">
           <%= text_field_tag :query,
                               params[:query],
