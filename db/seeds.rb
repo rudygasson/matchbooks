@@ -4,14 +4,7 @@ puts "Add 5 Users..."
 end
 
 puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
-# 4.times do
-#   Location.create!(
-#     name: Faker::Restaurant.name,
-#     address: Faker::Address.street_address,
-#     district: "Neukölln",
-#     zipcode: 12_043
-#   )
-# end
+
 Location.create!(
   name: "Heartspace Coffee",
   address: "Urbanstraße 70a, 10967 Berlin",
