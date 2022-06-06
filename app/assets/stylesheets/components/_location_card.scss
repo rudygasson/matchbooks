@@ -1,0 +1,20 @@
+.card-location {
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card-location .card-location-users {
+  position: absolute;
+  left: 9px;
+  bottom: 4px;
+}
