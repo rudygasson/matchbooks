@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="text-center">My meetings:</h1>
+
+  <div class="row">
+    <% if @meetings.count > 0 %>
+      <% @meetings.each do |meeting| %>
+        <div class="card-book my-1 p-1">
+          <% user = meeting.handovers[0].deliverer %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.id}", class: "avatar-bordered" %>
+          <div class="card-book-infos">
+            <h2><%= user.username %></h2>
+            <p><%= "#{meeting.date} #{meeting.time.hour}:#{meeting.time.min}" %> at <%= meeting.location.name %></p>
+            <p><%= meeting.status %></p>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="text-center"><em>There aren't any meetings scheduled for now.</em></p>
+    <% end %>
+  </div>
+</div>

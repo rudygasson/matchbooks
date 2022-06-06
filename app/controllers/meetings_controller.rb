@@ -1,4 +1,8 @@
 class MeetingsController < ApplicationController
+  def index
+    @meetings = policy_scope(Meeting).includes(:location, handovers: :deliverer)
+  end
+
   def show
     @meeting = Meeting.find(params[:id])
     authorize @meeting # authorize @meeting for pundit
@@ -12,7 +16,6 @@ class MeetingsController < ApplicationController
     }]
     @chatroom = Chatroom.find_by(meeting_id: @meeting)
     @message = Message.new
-    # raise
   end
 
   def new
@@ -28,7 +31,6 @@ class MeetingsController < ApplicationController
     @copy = Copy.find(params[:copy])
     @deliverer = User.find(params[:deliverer])
     @location = Location.find(params[:location])
-
     @meeting = Meeting.new(meeting_params)
     @meeting.location = @location
     authorize @meeting
@@ -37,10 +39,14 @@ class MeetingsController < ApplicationController
       # only after a meeting was saved, we can assign a meeting_id to chatroom and handover
       @chatroom = Chatroom.create(meeting_id: @meeting.id)
       @handover = Handover.new
-      @handover.meeting_id = @meeting.id
-      @handover.copy_id = @copy.id
-      @handover.receiver_id = current_user.id
-      @handover.deliverer_id = @deliverer.id
+      # @handover.meeting_id = @meeting.id
+      # @handover.copy_id = @copy.id
+      # @handover.receiver_id = current_user.id
+      # @handover.deliverer_id = @deliverer.id
+      @handover.meeting = @meeting
+      @handover.copy = @copy
+      @handover.receiver = current_user
+      @handover.deliverer = @deliverer
       if @handover.save
         redirect_to meeting_path(@meeting)
       else
