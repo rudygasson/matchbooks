@@ -3,6 +3,21 @@ class MeetingsController < ApplicationController
     @meetings = policy_scope(Meeting).includes(:location, handovers: :deliverer)
   end
 
+  def show
+    @meeting = Meeting.find(params[:id])
+    authorize @meeting # authorize @meeting for pundit
+    @location = @meeting.location
+    @handovers = Handover.where(meeting_id: @meeting)
+    @receiver = User.find(@handovers[0].receiver_id)
+    @deliverer = User.find(@handovers[0].deliverer_id)
+    @markers = [{
+      lat: @location.latitude,
+      lng: @location.longitude
+    }]
+    @chatroom = Chatroom.find_by(meeting_id: @meeting)
+    @message = Message.new
+  end
+
   def new
     @copy = Copy.find(params[:copy])
     @deliverer = @copy.user
@@ -21,13 +36,15 @@ class MeetingsController < ApplicationController
     authorize @meeting
 
     if @meeting.save
+      # only after a meeting was saved, we can assign a meeting_id to chatroom and handover
+      @chatroom = Chatroom.create(meeting_id: @meeting.id)
       @handover = Handover.new
       @handover.meeting = @meeting
       @handover.copy = @copy
       @handover.receiver = current_user
       @handover.deliverer = @deliverer
       if @handover.save
-        redirect_to meetings_path
+        redirect_to meeting_path(@meeting)
       else
         flash.alert = "Error - Saving of handover failed"
         render :new, status: :unprocessable_entity

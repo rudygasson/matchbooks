@@ -1,0 +1,72 @@
+<div class="container p-3 text-center">
+  <div class="container">
+    <h1>Meeting</h1>
+    <hr>
+    <div id='map'
+      style='width: 100%; height: 300px;'
+      data-controller="map"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-map-markers-value="<%= @markers.to_json %>">
+    </div>
+    <br>
+    <p class="fs-3 text"><%= @location.name %></p>
+    <p class="mb-0">Address:</p>
+    <p class="fs-5 text"><%= @location.address %></p>
+    <hr>
+    <h4>Status:</h4>
+    <%# still needs condition for all status designs %>
+    <% if @deliverer == current_user %>
+      <div class="container d-flex justify-content-center align-items-center gap-3">
+        <button type="button" class="btn btn-success mb-3 text-white">Confirm</button>
+        <span>or</span>
+        <button type="button" class="btn btn-danger mb-3 text-white">Reject</button>
+      </div>
+    <% else %>
+      <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status %>...</button>
+    <% end %>
+    <div class="container d-flex justify-content-center align-items-center">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@receiver.id}", class: "avatar-bordered avatar-large"%>
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff;">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@deliverer.id}", class: "avatar-bordered avatar-large"%>
+    </div>
+    <%# chat start %>
+    <h4>Chat:</h4>
+    <div class="container chatroom"
+      data-controller="chatroom-subscription"
+      data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+    >
+      <div class="messages" data-chatroom-subscription-target="messages">
+        <% @chatroom.messages.each do |message| %>
+          <%= render "messages/message", message: message %>
+        <% end %>
+      </div>
+      <%= simple_form_for [@meeting, @message],
+        html: { data: { controller: :chatroom_subscription, action: "turbo:submit-end->chatroom-subscription#resetForm" },
+                class: "d-flex" } do |f|
+      %>
+        <%= f.input :content,
+          label: false,
+          placeholder: "Write a message",
+          wrapper_html: {class: "flex-grow-1"}
+        %>
+        <%= f.submit "Send", class: "btn btn-success mb-3" %>
+      <% end %>
+    </div>
+  <%# chat end %>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container">
+    <h4>Books:</h4>
+    <% @handovers.each do |handover| %>
+      <% book = handover.copy.book %>
+      <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
+          <img src="<%= book.thumbnail %>" alt="book card">
+          <div class="card-book-infos">
+            <h2><%= "#{book.title}"%></h2>
+            <p><%= book.author %></p>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
