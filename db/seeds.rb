@@ -7,31 +7,31 @@ puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
 
 Location.create!(
   name: "Heartspace Coffee",
-  address: "Urbanstraße 70a",
+  address: "Urbanstraße 70a, 10967 Berlin",
   district: "Neukölln",
   zipcode: 10_967
 )
 Location.create!(
   name: "Café bRICK",
-  address: "Lenaustraße 1",
+  address: "Lenaustraße 1, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
 Location.create!(
   name: "KulturCafé",
-  address: "Friedelstraße 28",
+  address: "Friedelstraße 28, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
 Location.create!(
   name: "Books & Bagels",
-  address: "Warschauer Str. 74",
+  address: "Warschauer Str. 74, 10243 Berlin",
   district: "Friedrichshain-Kreuzberg",
   zipcode: 10_243
 )
 Location.create!(
   name: "LeWagon",
-  address: "Rudi-Dutschke-Straße 26",
+  address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
   district: "Mitte",
   zipcode: 10_969
 )
