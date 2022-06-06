@@ -13,7 +13,8 @@ export default class extends Controller {
       { received: data => this.#insertMessageAndScrollDown(data) }
       )
     console.log(`Subscribe to the chatroom with the id ${this.chatroomIdValue}.`)
-    // this.element.addEventListener("submit", this.resetForm());
+    // scroll to the latest message when page is loaded
+    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
   }
 
   #insertMessageAndScrollDown(data) {
