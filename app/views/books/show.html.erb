@@ -36,12 +36,12 @@
             <div id="flush-collapse<%= location.id %>" class="accordion-collapse collapse" aria-labelledby="flush-heading<%= location.id %>" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body bg-white">
                 <%# show users that offer the book at this location %>
-                <p class="m-0">Set up a meeting with:</p>
+                <p><small class="m-0">Set up a meeting with:</small></p>
                 <%# iterate over available users at location %>
                 <% location.users.each do |user| %>
                   <% if (user.copies.find_by book_id: params[:id]) %>
                     <% unless user == current_user %>
-                      <%= link_to user.username, new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])) %>
+                      <p class="m-1"><%= link_to user.username, new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])) %></p>
                     <% end %>
                   <% end %>
                 <% end %>
