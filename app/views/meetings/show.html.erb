@@ -41,7 +41,6 @@
         <% end %>
       </div>
       <%= simple_form_for [@meeting, @message],
-        # the reset is currently not working and so far I couldn't figure out why
         html: { data: { controller: :chatroom_subscription, action: "turbo:submit-end->chatroom-subscription#resetForm" },
                 class: "d-flex" } do |f|
       %>
