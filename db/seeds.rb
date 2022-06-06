@@ -3,20 +3,37 @@ puts "Add 5 Users..."
   User.create!(Faker::Internet.user('username', 'email').merge(password: "123456"))
 end
 
-puts "Add 4 Locations in Neukölln and 1 in Kreuzberg..."
-4.times do
-  Location.create!(
-    name: Faker::Restaurant.name,
-    address: Faker::Address.street_address,
-    district: "Neukölln",
-    zipcode: 12_043
-  )
-end
+puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
+
 Location.create!(
-  name: Faker::Restaurant.name,
-  address: Faker::Address.street_address,
+  name: "Heartspace Coffee",
+  address: "Urbanstraße 70a, 10967 Berlin",
+  district: "Neukölln",
+  zipcode: 10_967
+)
+Location.create!(
+  name: "Café bRICK",
+  address: "Lenaustraße 1, 12047 Berlin",
+  district: "Neukölln",
+  zipcode: 12_047
+)
+Location.create!(
+  name: "KulturCafé",
+  address: "Friedelstraße 28, 12047 Berlin",
+  district: "Neukölln",
+  zipcode: 12_047
+)
+Location.create!(
+  name: "Books & Bagels",
+  address: "Warschauer Str. 74, 10243 Berlin",
   district: "Friedrichshain-Kreuzberg",
-  zipcode: 10_997
+  zipcode: 10_243
+)
+Location.create!(
+  name: "LeWagon",
+  address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
+  district: "Mitte",
+  zipcode: 10_969
 )
 
 puts "Add books from test_books.json..."

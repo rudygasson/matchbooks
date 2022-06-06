@@ -192,88 +192,6 @@
     "items": [
       {
         "kind": "books#volume",
-        "id": "uoZwU0EyVDcC",
-        "etag": "ZqKvvlNgNMU",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/uoZwU0EyVDcC",
-        "volumeInfo": {
-          "title": "Serendipities",
-          "subtitle": "Language & Lunacy",
-          "authors": [
-            "Umberto Eco"
-          ],
-          "publisher": "Houghton Mifflin Harcourt",
-          "publishedDate": "1999",
-          "description": "See:",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_10",
-              "identifier": "0156007517"
-            },
-            {
-              "type": "ISBN_13",
-              "identifier": "9780156007511"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": false
-          },
-          "pageCount": 129,
-          "printType": "BOOK",
-          "categories": [
-            "Literary Collections"
-          ],
-          "averageRating": 4,
-          "ratingsCount": 9,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.3.2.0.preview.0",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=uoZwU0EyVDcC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=uoZwU0EyVDcC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.de/books?id=uoZwU0EyVDcC&dq=isbn:9780156007511&hl=&cd=1&source=gbs_api",
-          "infoLink": "http://books.google.de/books?id=uoZwU0EyVDcC&dq=isbn:9780156007511&hl=&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Serendipities.html?hl=&id=uoZwU0EyVDcC"
-        },
-        "saleInfo": {
-          "country": "DE",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
-        },
-        "accessInfo": {
-          "country": "DE",
-          "viewability": "NO_PAGES",
-          "embeddable": false,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": false
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=uoZwU0EyVDcC&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "NONE",
-          "quoteSharingAllowed": false
-        },
-        "searchInfo": {
-          "textSnippet": "See:"
-        }
-      }
-    ]
-  },
-  {
-    "kind": "books#volumes",
-    "totalItems": 1,
-    "items": [
-      {
-        "kind": "books#volume",
         "id": "vmaqbR1UKhkC",
         "etag": "v+i5Kkp+zvo",
         "selfLink": "https://www.googleapis.com/books/v1/volumes/vmaqbR1UKhkC",
@@ -427,6 +345,111 @@
         },
         "searchInfo": {
           "textSnippet": "The results of this new world of easy collaboration can be both good (young people defying an oppressive government with a guerrilla ice-cream eating protest) and bad (girls sharing advice for staying dangerously skinny) but it s here and ..."
+        }
+      }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "FKziXsnqLTEC",
+        "etag": "a6YDALzJC3k",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/FKziXsnqLTEC",
+        "volumeInfo": {
+          "title": "The Lord of the Rings: The Fellowship of the Ring, The Two Towers, The Return of the King",
+          "authors": [
+            "J. R. R. Tolkien"
+          ],
+          "publisher": "HarperCollins UK",
+          "publishedDate": "2009-04-20",
+          "description": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers & The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and page references, and 3 maps including a detailed map of Middle-earth.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780007322596"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0007322593"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": false
+          },
+          "pageCount": 1216,
+          "printType": "BOOK",
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 4.5,
+          "ratingsCount": 54,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "2.28.21.0.preview.2",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=FKziXsnqLTEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=FKziXsnqLTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.de/books?id=FKziXsnqLTEC&printsec=frontcover&dq=isbn:9780007322596&hl=&cd=1&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=FKziXsnqLTEC&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FKziXsnqLTEC"
+        },
+        "saleInfo": {
+          "country": "DE",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 15.49,
+            "currencyCode": "EUR"
+          },
+          "retailPrice": {
+            "amount": 15.49,
+            "currencyCode": "EUR"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=FKziXsnqLTEC&rdid=book-FKziXsnqLTEC&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 15490000,
+                "currencyCode": "EUR"
+              },
+              "retailPrice": {
+                "amountInMicros": 15490000,
+                "currencyCode": "EUR"
+              },
+              "giftable": true
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "DE",
+          "viewability": "PARTIAL",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.de/books/download/The_Lord_of_the_Rings_The_Fellowship_of-sample-epub.acsm?id=FKziXsnqLTEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=FKziXsnqLTEC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers &amp; The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and ..."
         }
       }
     ]
