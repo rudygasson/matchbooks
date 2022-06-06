@@ -1,7 +1,7 @@
 .chatroom {
   background: white;
   margin-top: 9px;
-  height: 30vh; //calc(100vh - 75px);
+  height: 40vh; //calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,8 +20,8 @@
   }
 
   #new_message {
-    border-top: 1px solid $gray-200;
-    padding: 1rem;
+    // border-top: 1px solid $gray-200;
+    padding: 0rem;
 
     .form-group {
       margin-bottom: 0;

@@ -40,20 +40,19 @@
           <%= render "messages/message", message: message %>
         <% end %>
       </div>
-    </div>
-    <%= simple_form_for [@meeting, @message],
-      # the reset is currently not working and so far I couldn't figure out why
-      html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
-              class: "d-flex" } do |f|
-    %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Write a message",
-        wrapper_html: {class: "flex-grow-1"}
+      <%= simple_form_for [@meeting, @message],
+        # the reset is currently not working and so far I couldn't figure out why
+        html: { data: { controller: :chatroom_subscription, action: "turbo:submit-end->chatroom-subscription#resetForm" },
+                class: "d-flex" } do |f|
       %>
-      <%= f.submit "Send", class: "btn btn-success mb-3" %>
-    <% end %>
-  </div>
+        <%= f.input :content,
+          label: false,
+          placeholder: "Write a message",
+          wrapper_html: {class: "flex-grow-1"}
+        %>
+        <%= f.submit "Send", class: "btn btn-success mb-3" %>
+      <% end %>
+    </div>
   <%# chat end %>
   <div class="container">
     <hr>

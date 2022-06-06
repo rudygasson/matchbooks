@@ -12,8 +12,9 @@ export default class extends Controller {
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: data => this.#insertMessageAndScrollDown(data) }
       )
-      // console.log(`Subscribe to the chatroom with the id ${this.chatroomIdValue}.`)
-    }
+    console.log(`Subscribe to the chatroom with the id ${this.chatroomIdValue}.`)
+    // this.element.addEventListener("submit", this.resetForm());
+  }
 
   #insertMessageAndScrollDown(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
@@ -21,7 +22,7 @@ export default class extends Controller {
   }
 
   resetForm(event) {
-    // the reset is currently not working and so far I couldn't figure out why
+    console.log("Submit-end is listening!")
     event.target.reset()
   }
 
