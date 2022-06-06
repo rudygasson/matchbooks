@@ -22,7 +22,6 @@ class BooksController < ApplicationController
     # get distinct list of locations where users are willing to meet
     @locations_uniq = @locations.map.uniq
     # select book users from book locations
-    # @location_book_users = @locations_uniq.map { |location| location.users & @book_users }
     @location_book_users = []
     @locations_uniq.each do |location|
       @location_book_users += location.users & @book_users

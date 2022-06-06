@@ -19,7 +19,6 @@
     <% else %>
       <%# iterate over available locations %>
       <% @locations_uniq.each do |location| %>
-        <%# BUGFIX: filter locations that only belong to the current user %>
         <div class="accordion accordion-flush">
           <div class="accordion-item mt-2">
             <div class="accordion-header" id="flush-heading<%= location.id %>">
