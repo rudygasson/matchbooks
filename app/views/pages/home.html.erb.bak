@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="text-center font-logo">matchbooks</h1>
-  <h4 class="text-center">Find books in your area</h4>
+  <h4 class="text-center font-slogan">Find books in your area</h4>
   <div class="container">
     <div class="row mx-auto">
       <%= form_tag root_path, method: :get, class: "d-flex" do %>
@@ -36,9 +36,6 @@
               <div class="card-book-infos">
                 <h2><%= "#{book.title}"%></h2>
                 <p><%= book.author %></p>
-                <br>
-                <span class="material-symbols-outlined">event_available</span>
-                <span class="material-symbols-outlined">delete</span>
               </div>
           <% end %>
         <% end %>

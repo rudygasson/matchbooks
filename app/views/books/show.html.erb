@@ -1,14 +1,11 @@
-<div class="container p-3 text-center">
-  <div class="book-cover">
-    <img src=<%= @book.cover_image %> alt="book cover" class="mb-3">
+<div class="container p-3">
+  <div class="container book-cover book-info">
+    <img src=<%= @book.cover_image %> alt="book cover" class="mb-3 img-center">
     <h2><%= @book.title %></h2>
-    <p>by <%= @book.author %></p>
-    <span>Description:</span>
+    <p class="author">by <%= @book.author %></p>
     <p><%= @book.description %></p>
-    <span>Published:</span>
-    <p><%= @book.year %></p>
-    <span>ISBN:</span>
-    <p><%= @book.isbn %></p>
+    <p><strong>Published: </strong><%= @book.year %></p>
+    <p><strong>ISBN: </strong><%= @book.isbn %></p>
   </div>
   <hr>
   <div class="container">
@@ -17,17 +14,17 @@
       <p><em>Sorry, but this book is currently not available...</em></p>
     <% else %>
       <% @locations_uniq.each do |location| %>
-        <div class="container mb-3">
+        <div class="container mb-3 locations">
           <h4 class="m-0"><%= location.name %></h4>
           <%# show users that offer the book at this location %>
           <p class="m-0">Set up a meeting with:</p>
-          <% location.users.each do |user| %>
+          <p><% location.users.each do |user| %>
             <% if (user.copies.find_by book_id: params[:id]) %>
               <% unless user == current_user %>
                 <%= link_to user.username, new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])) %>
               <% end %>
             <% end %>
-          <% end %>
+          <% end %></p>
         </div>
       <% end %>
     <% end %>
