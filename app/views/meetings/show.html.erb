@@ -24,10 +24,15 @@
     <% else %>
       <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status %>...</button>
     <% end %>
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center align-items-center mt-1">
       <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
-      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff;">
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff">
       <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center mb-1">
+      <span class="avatar-large"><%= @deliverer.username %></span>
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
+      <span class="avatar-large"><%= @receiver.username %></span>
     </div>
     <%# chat start %>
     <h4>Chat:</h4>
