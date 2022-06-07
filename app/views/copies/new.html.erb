@@ -5,15 +5,9 @@
       <div class="scanner" data-controller="scanner">
         <div>
           <a class="btn btn-success" id="startButton">Start</a>
-          <a class="btn btn-warning" id="resetButton">Reset</a>
+          <a class="btn btn-warning" id="stopButton">Stop</a>
         </div>
-        <div>
-          <video id="video" width="600" height="400" style="border: 1px solid gray"></video>
-        </div>
-        <div id="sourceSelectPanel" style="display:none">
-          <label for="sourceSelect">Change video source:</label>
-          <select id="sourceSelect" style="max-width:400px">
-          </select>
+        <div id="scan-video">
         </div>
         <label>Result:</label>
         <pre><code id="result"></code></pre>
