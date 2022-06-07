@@ -1,10 +1,18 @@
 puts "Add 5 Users..."
-users = %w[thibault oliver sebi alex pato]
-users.each do |user|
+users_with_avatar = {
+  sebi: "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512",
+  oliver: "https://ca.slack-edge.com/T02NE0241-USL1K1LKA-94322c3f7d7c-512",
+  thibault: "https://ca.slack-edge.com/T02NE0241-U016C685S3U-518502b630b9-192",
+  nina: "https://ca.slack-edge.com/T02NE0241-U0160CHLQ14-c8e3ee5c6d61-512",
+  pato: "https://ca.slack-edge.com/T02NE0241-U01BHAWKMDZ-5728ee214b68-512"
+}
+
+users_with_avatar.each do |key, value|
   User.create!(
-    username: user.capitalize,
-    email: "#{user}@test.com",
-    password: "123456"
+    username: key.capitalize,
+    email: "#{key}@test.com",
+    password: "123456",
+    avatar: value
   )
 end
 
