@@ -6,7 +6,7 @@ export default class extends Controller {
     console.log("Here I am!")
   }
 
-  refresh() {
-
+  refresh(event) {
+    console.log("Here I am as well!")
   }
 }
