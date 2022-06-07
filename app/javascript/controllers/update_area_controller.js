@@ -10,17 +10,15 @@ export default class extends Controller {
 
   refresh() {
     const district = this.selectTarget.value
-    // console.log(district)
+
     fetch(`/?district=${district}&query=`, {
       method: "GET",
       headers: { "Accept": "application/json", "X-CSRF-Token": this.csrfToken }
     })
       .then(response => response.json())
       .then((data) => {
-        console.log(data.insert)
         this.bookListTarget.innerHTML = ""
         this.bookListTarget.insertAdjacentHTML('beforeend', data.insert)
       })
-
   }
 }

@@ -18,9 +18,8 @@ class PagesController < ApplicationController
     @districts = ["All areas", "Charlottenburg-Wilmersdorf", "Friedrichshain-Kreuzberg", "Lichtenberg", "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Treptow-Köpenick"]
 
     respond_to do |format|
-        format.html
-        format.json
-        # { render json: { filtered_books: @filtered_books } }
+      format.html
+      format.json
     end
   end
 

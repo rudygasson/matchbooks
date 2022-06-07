@@ -1,6 +1,16 @@
-<div class="row" data-update-area-target="book-list">
-  <% if filtered_books.count > 0 %>
-    <% filtered_books.reverse.each do |book| %>
+<% if (@search_term != nil && @search_term != "") && @search_district != "All areas" %>
+  <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %>:</h3>
+<% elsif (@search_term != nil && @search_term != "") && @search_district == "All areas" %>
+  <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in Berlin:</h3>
+<% elsif @search_term == "" && @search_district != "All areas" %>
+  <h3 class="text-center">Latest books in <%= @search_district %>:</h3>
+<% else %>
+  <h3 class="text-center">Latest books in Berlin:</h3>
+<% end %>
+
+<div class="row">
+  <% if @filtered_books.count > 0 %>
+    <% @filtered_books.reverse.each do |book| %>
       <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
           <img src="<%= book.thumbnail %>" alt="book card">
           <div class="card-book-infos">
