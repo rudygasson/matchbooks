@@ -1,6 +1,7 @@
 .card-location {
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1507550284711-08dadbf8621f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9vayUyMGNhZmV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
   height: 120px;
   display: flex;
   justify-content: center;
@@ -11,6 +12,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+}
+
+.card-location:hover {
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1507550284711-08dadbf8621f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9vayUyMGNhZmV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
 }
 
 .card-location .card-location-users {

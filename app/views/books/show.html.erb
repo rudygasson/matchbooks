@@ -27,7 +27,6 @@
                     data-bs-target="#flush-collapse<%= location.id %>"
                     aria-expanded="false"
                     aria-controls="flush-collapse<%= location.id %>"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1507550284711-08dadbf8621f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9vayUyMGNhZmV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60)"
               >
                 <%= location.name %>
                 <span class="fs-6 card-location-users"><i class="fa-solid fa-user-group"></i> <%= (location.users & @location_book_users_uniq).count %></span>
