@@ -1,16 +1,16 @@
 module BookDataHelper
   def self.extract_book(gdata, book_params = nil)
+    g_id = gdata["items"][0]["id"]
+    vol = gdata["items"][0]["volumeInfo"]
     if book_params.nil?
       book = Book.new
+      book.isbn = vol["industryIdentifiers"][0]["identifier"]
     else
       book = Book.new(book_params)
     end
-    g_id = gdata["items"][0]["id"]
-    vol = gdata["items"][0]["volumeInfo"]
-    book.isbn = vol["industryIdentifiers"][0]["identifier"]
     book.title = vol["title"]
     book.author = vol["authors"][0]
-    book.description = vol["description"]
+    book.description = vol["description"].gsub("�", " ")
     book.year = vol["publishedDate"].slice(0, 4).to_i
     if vol["imageLinks"].nil?
       book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
