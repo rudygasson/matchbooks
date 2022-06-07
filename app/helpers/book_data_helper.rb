@@ -7,10 +7,12 @@ module BookDataHelper
     end
     g_id = gdata["items"][0]["id"]
     vol = gdata["items"][0]["volumeInfo"]
-    book.isbn = vol["industryIdentifiers"][0]["identifier"]
+    if book_params.nil?
+      book.isbn = vol["industryIdentifiers"][0]["identifier"]
+    end
     book.title = vol["title"]
     book.author = vol["authors"][0]
-    book.description = vol["description"]
+    book.description = vol["description"].gsub("�", " ")
     book.year = vol["publishedDate"].slice(0, 4).to_i
     if vol["imageLinks"].nil?
       book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
