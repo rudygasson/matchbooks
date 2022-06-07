@@ -1,14 +1,12 @@
 module BookDataHelper
   def self.extract_book(gdata, book_params = nil)
-    if book_params.nil?
-      book = Book.new
-    else
-      book = Book.new(book_params)
-    end
     g_id = gdata["items"][0]["id"]
     vol = gdata["items"][0]["volumeInfo"]
     if book_params.nil?
+      book = Book.new
       book.isbn = vol["industryIdentifiers"][0]["identifier"]
+    else
+      book = Book.new(book_params)
     end
     book.title = vol["title"]
     book.author = vol["authors"][0]
