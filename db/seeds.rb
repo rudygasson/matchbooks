@@ -1,10 +1,14 @@
 puts "Add 5 Users..."
-5.times do
-  User.create!(Faker::Internet.user('username', 'email').merge(password: "123456"))
+users = %w[thibault oliver sebi alex pato]
+users.each do |user|
+  User.create!(
+    username: user.capitalize,
+    email: "#{user}@test.com",
+    password: "123456"
+  )
 end
 
 puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
-
 Location.create!(
   name: "Heartspace Coffee",
   address: "Urbanstraße 70a, 10967 Berlin",
