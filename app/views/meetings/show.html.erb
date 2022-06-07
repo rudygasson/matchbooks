@@ -25,9 +25,9 @@
       <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status %>...</button>
     <% end %>
     <div class="container d-flex justify-content-center align-items-center">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@receiver.id}", class: "avatar-bordered avatar-large"%>
+      <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
       <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff;">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@deliverer.id}", class: "avatar-bordered avatar-large"%>
+      <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
     </div>
     <%# chat start %>
     <h4>Chat:</h4>
