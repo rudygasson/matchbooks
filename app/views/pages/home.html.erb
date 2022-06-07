@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" data-controller="update-area">
   <h1 class="text-center font-logo">matchbooks</h1>
   <h4 class="text-center">Find books in your area</h4>
   <div class="container">
     <div class="row mx-auto">
       <%= form_tag root_path, method: :get do %>
-          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-12 form-select"} %>
+          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {"class" => "col-12 form-select", "data-action" => "click->update-area#refresh"} %>
         <div class="d-flex">
           <%= text_field_tag :query,
                               params[:query],
@@ -30,7 +30,7 @@
       <h3 class="text-center">Latest books in Berlin:</h3>
     <% end %>
 
-    <div class="row">
+    <div class="row" data-update-area-target="book-list">
       <% if @filtered_books.count > 0 %>
         <% @filtered_books.reverse.each do |book| %>
           <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
