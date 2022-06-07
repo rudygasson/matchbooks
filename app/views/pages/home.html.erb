@@ -3,14 +3,16 @@
   <h4 class="text-center">Find books in your area</h4>
   <div class="container">
     <div class="row mx-auto">
-      <%= form_tag root_path, method: :get, class: "d-flex" do %>
-        <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-4"} %>
-        <%= text_field_tag :query,
-                            params[:query],
-                            class: "form-control",
-                            placeholder: "Search here" %>
-        <%= button_tag class: "btn btn-success" do %>
+      <%= form_tag root_path, method: :get do %>
+          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-12 form-select"} %>
+        <div class="d-flex">
+          <%= text_field_tag :query,
+                              params[:query],
+                              class: "form-control",
+                              placeholder: "Search here" %>
+          <%= button_tag class: "btn btn-success" do %>
           <i class='fas fa-search'></i>
+        </div>
         <% end %>
       <% end %>
     </div>
