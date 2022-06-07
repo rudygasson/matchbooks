@@ -6,7 +6,7 @@
       <% @meetings.each do |meeting| %>
         <%= link_to meeting_path(meeting), class: "card-book my-1 p-1" do %>
           <% user = meeting.handovers[0].deliverer %>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.id}", class: "avatar-bordered" %>
+          <%= image_tag meeting.handovers[0].deliverer.avatar, class: "avatar-bordered" %>
           <div class="card-book-infos">
             <h2><%= user.username %></h2>
             <p><%= "#{meeting.date} #{meeting.time.hour}:#{meeting.time.min}" %> at <%= meeting.location.name %></p>

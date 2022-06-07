@@ -3,7 +3,7 @@
     <div><a href="/" class="navbar-font-logo abs">mb</a></div>
     <% if user_signed_in? %>
       <div class="ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.id}",
+        <%= image_tag "#{current_user.avatar}",
             class: "avatar",
             html: { id: "navbarDropdown", data_bs_toggle: "dropdown" } %>
       </div>

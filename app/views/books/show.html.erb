@@ -43,7 +43,7 @@
                     <% unless user == current_user %>
                       <%= link_to new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])), class: "text-decoration-none" do %>
                         <div class="d-flex align-items-center mb-1 gap-1" >
-                          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.id}", class: "avatar" %>
+                          <%= image_tag user.avatar, class: "avatar" %>
                           <small><%= user.username %></small>
                         </div>
                       <% end %>
