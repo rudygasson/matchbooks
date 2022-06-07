@@ -1,9 +1,10 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Kanit:wght@600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Rubik:wght@300;400;600&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Rubik", "sans-serif";
+$headers-font: "Playfair Display", "serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +15,54 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+// general font configs
+
+.font-logo {
+  font-family: 'Kanit', sans-serif;
+  color: #c13f35;
+  text-decoration: none;
+  text-shadow: -1px 1px #545454;
+  font-size: 48px;
+}
+
+.font-slogan {
+  font-family: 'Courier Prime', monospace;
+}
+
+.font-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.book-info p {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.book-info .author {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.locations p {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: left;
+}
+
+// icons from Google Fonts
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

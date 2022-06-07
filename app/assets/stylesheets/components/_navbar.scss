@@ -1,14 +1,15 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  overflow: hidden;
+  background-color: #e6e6e6;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
 }
 
-.navbar-lewagon .navbar-collapse {
+.main {
   flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  margin-top: 80px; /* Add a top margin to avoid content overlay */
 }
 
 .navbar-font-logo {
@@ -24,7 +25,7 @@
 }
 
 .navbar-menu-style {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: #e6e6e6;
   font-size: 14px;
   text-decoration: none;

@@ -1,7 +1,7 @@
 .card-book {
   overflow: hidden;
   height: 120px;
-  background: white;
+  background: #f6f6f6;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -9,12 +9,22 @@
   color: black;
 }
 
+.book-box {
+  height: 100%;
+  width: 20%;
+}
+
 .card-book img {
   height: 100%;
   object-fit: cover;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-book h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
   font-weight: bold;
   margin: 0;
@@ -22,6 +32,8 @@
 }
 
 .card-book p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -31,5 +43,6 @@
 }
 
 .card-book .card-book-infos {
+  width: 80%;
   padding: 16px;
 }
