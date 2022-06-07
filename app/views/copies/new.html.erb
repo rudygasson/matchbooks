@@ -3,6 +3,20 @@
     <div class="col-12 col-md-8 text-center">
       <h1>Add a new book to your library</h1>
       <div class="scanner" data-controller="scanner">
+        <div>
+          <a class="btn btn-success" id="startButton">Start</a>
+          <a class="btn btn-warning" id="resetButton">Reset</a>
+        </div>
+        <div>
+          <video id="video" width="600" height="400" style="border: 1px solid gray"></video>
+        </div>
+        <div id="sourceSelectPanel" style="display:none">
+          <label for="sourceSelect">Change video source:</label>
+          <select id="sourceSelect" style="max-width:400px">
+          </select>
+        </div>
+        <label>Result:</label>
+        <pre><code id="result"></code></pre>
       </div>
     </div>
   </div>
