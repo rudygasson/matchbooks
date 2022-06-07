@@ -1,6 +1,6 @@
 <div class="container mt-3 text-center">
   <h1>Profile</h1>
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.id}", class: "avatar-xl avatar-bordered mb-4" %>
+  <%= image_tag "#{current_user.avatar}", class: "avatar-xl avatar-bordered mb-4" %>
   <h5>Username:</h5>
   <p><%= @user.username %></p>
   <h5>Email:</h5>

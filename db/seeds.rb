@@ -1,10 +1,22 @@
 puts "Add 5 Users..."
-5.times do
-  User.create!(Faker::Internet.user('username', 'email').merge(password: "123456"))
+users_with_avatar = {
+  sebi: "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512",
+  oliver: "https://ca.slack-edge.com/T02NE0241-USL1K1LKA-94322c3f7d7c-512",
+  thibault: "https://ca.slack-edge.com/T02NE0241-U016C685S3U-518502b630b9-192",
+  nina: "https://ca.slack-edge.com/T02NE0241-U0160CHLQ14-c8e3ee5c6d61-512",
+  pato: "https://ca.slack-edge.com/T02NE0241-U01BHAWKMDZ-5728ee214b68-512"
+}
+
+users_with_avatar.each do |key, value|
+  User.create!(
+    username: key.capitalize,
+    email: "#{key}@test.com",
+    password: "123456",
+    avatar: value
+  )
 end
 
 puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
-
 Location.create!(
   name: "Heartspace Coffee",
   address: "Urbanstraße 70a, 10967 Berlin",
