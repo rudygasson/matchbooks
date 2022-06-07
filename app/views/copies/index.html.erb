@@ -1,9 +1,32 @@
-<h1>My library</h1>
-<br>
-<%= link_to "Add a book", new_copy_path, class: "btn btn-success" %>
-<br>
-<% @copies.each do |copy| %>
-  <img src="<%= Book.find(copy.book_id).thumbnail %>" alt="cover" class="mt-3">
-  <%= link_to "Delete", copy_path(copy), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <p><%= Book.find(copy.book_id).title %></p>
-<% end %></p>
+<div class="container">
+  <h1 class="text-center">My library</h1>
+  <br>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Add a book", new_copy_path, class: "btn btn-success" %>
+  </div>
+  <div class="row row-cols-2">
+    <% if @copies.count > 0 %>
+      <% @copies.reverse.each do |copy| %>
+        <div class="col-md g-4">
+          <div class="card h-100">
+            <%= link_to book_path(copy.book) do %>
+                <img src="<%= copy.book.cover_image %>" class="card-img-top" alt="book card">
+                <div class="card-body">
+                  <p class="card-text"><small><em><%= copy.book.author %></em></small></p>
+                </div>
+            <% end %>
+            <div class="card-footer mt-auto">
+              <small class="text-muted">
+                <%= link_to copy_path(copy), class: "fs-6 card-location-users", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <i class="fa-solid fa-trash-can"></i>
+                <% end %>
+              </small>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+    <% end %>
+  </div>
+</div>
