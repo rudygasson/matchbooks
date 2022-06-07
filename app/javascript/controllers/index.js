@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
+
+import UpdateAreaController from "./update_area_controller.js"
+application.register("update-area", UpdateAreaController)
