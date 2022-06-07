@@ -1,9 +1,15 @@
 import { Controller } from "@hotwired/stimulus";
 import Quagga from "@ericblade/quagga2";
+import { Modal } from "bootstrap";
 
 export default class extends Controller {
   connect() {
+    this.csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content")
     console.log("Scanner controller connected");
+    console.log(this.csrfToken);
+
+    this.modal = new Modal(document.getElementById("exampleModal"));
+    this.modal.show();
     Quagga.init(
       {
         inputStream: {
@@ -40,10 +46,6 @@ export default class extends Controller {
     document.querySelector("#startButton").addEventListener("click", (e) => {
       console.log("Start");
       Quagga.start();
-    });
-    document.querySelector("#stopButton").addEventListener("click", (e) => {
-      console.log("Stop");
-      Quagga.stop();
     });
   }
 }

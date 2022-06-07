@@ -1,3 +1,7 @@
-.scanner video {
+#scan-video video {
   width: 100%;
+}
+
+#scan-video canvas {
+  display: none;
 }
