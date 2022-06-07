@@ -9,14 +9,23 @@
   color: black;
 }
 
+.book-box {
+  height: 100%;
+  width: 20%;
+}
+
 .card-book img {
   height: 100%;
   object-fit: cover;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-book h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
   text-decoration: none;
@@ -24,7 +33,7 @@
 
 .card-book p {
   font-family: 'Rubik', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
