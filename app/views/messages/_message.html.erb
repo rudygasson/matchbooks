@@ -1,7 +1,17 @@
-<div id="message-<%= message.id %>">
+<% if message.user == receiver %>
+<div id="message-<%= message.id %>" align="left">
   <small>
     <strong><%= message.user.username %></strong>
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %>:</i>
   </small>
   <p><%= message.content %></p>
 </div>
+<% else %>
+<div id="message-<%= message.id %>" align="right">
+  <small>
+    <strong><%= message.user.username %></strong>
+    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %>:</i>
+  </small>
+  <p><%= message.content %></p>
+</div>
+<% end %>
