@@ -1,20 +1,14 @@
 import { Controller } from "@hotwired/stimulus";
 import Quagga from "@ericblade/quagga2";
-import { Modal } from "bootstrap";
 
 export default class extends Controller {
-  static targets = ["scanVideo", "foundIsbn"];
+  static targets = ["scanVideo"];
 
   connect() {
-    this.csrfToken = document
-      .querySelector('meta[name="csrf-token"]')
-      .getAttribute("content");
     console.log("Scanner controller connected");
   }
 
   init() {
-    const isbnElement = this.foundIsbnTarget;
-    const confirmationModal = new Modal("#confirmationModal");
     Quagga.init(
       {
         inputStream: {
@@ -35,7 +29,7 @@ export default class extends Controller {
           console.log(err);
           return;
         }
-        console.log("Initialization finished. Ready to start");
+        console.log("Initialization finished. Ready to scan");
         Quagga.start();
         Quagga.onDetected((data) => {
           console.log(data.codeResult);
@@ -43,7 +37,6 @@ export default class extends Controller {
           if (code.startsWith("978")) {
             Quagga.stop();
             document.querySelector("#book_isbn").value = code;
-            // confirm(code);
           } else {
             document.querySelector("#book_isbn").value = "No ISBN";
           }

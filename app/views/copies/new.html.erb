@@ -9,30 +9,6 @@
           <a class="btn btn-success" id="startButton" data-action="click->scanner#init">Scan Now</a>
           <a class="btn btn-warning" id="stopButton" data-action="click->scanner#stop">Stop Scan</a>
         </div>
-        <%# <label>Result:</label>
-        <pre><code id="result"></code></pre> %>
-      </div>
-      <!-- Button trigger modal -->
-      <%# <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#confirmationModal">
-        Launch demo modal
-      </button> %>
-      <!-- Modal -->
-      <div class="modal fade" id="confirmationModal" data-action="shown.bs.modal->scanner#confirm" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="confirmationModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p data-scanner-target="foundIsbn"></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-success">Save this book</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
