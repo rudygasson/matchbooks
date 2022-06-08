@@ -5,10 +5,14 @@
     <% if @meetings.count > 0 %>
       <% @meetings.each do |meeting| %>
         <%= link_to meeting_path(meeting), class: "card-book my-1 p-1" do %>
-          <% user = meeting.handovers[0].deliverer %>
-          <%= image_tag meeting.handovers[0].deliverer.avatar, class: "avatar-bordered avatar-large" %>
+          <% if current_user == meeting.handovers[0].receiver  %>
+            <% partner_user = meeting.handovers[0].deliverer %>
+          <% elsif current_user == meeting.handovers[0].deliverer  %>
+            <% partner_user = meeting.handovers[0].receiver %>
+          <% end %>
+          <%= image_tag partner_user.avatar, class: "avatar-bordered avatar-large" %>
           <div class="card-book-infos">
-            <h2><%= user.username %></h2>
+            <h2><%= partner_user.username %></h2>
             <p><%= "#{meeting.date} #{meeting.time.hour}:#{meeting.time.min}" %> at <%= meeting.location.name %></p>
             <p><%= meeting.status %></p>
           </div>
