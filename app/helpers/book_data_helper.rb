@@ -10,7 +10,9 @@ module BookDataHelper
     end
     book.title = vol["title"]
     book.author = vol["authors"][0]
-    book.description = vol["description"].gsub("�", " ")
+    if vol["description"] != nil
+      book.description = vol["description"].gsub("�", " ")
+    end
     book.year = vol["publishedDate"].slice(0, 4).to_i
     if vol["imageLinks"].nil?
       book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
