@@ -63,7 +63,7 @@ end
 
 puts "Connect users to random locations..."
 User.all.each do |user|
-  3.times do
+  2.times do
     location = Location.find(Location.ids.sample)
     user.locations << location unless user.locations.include? location
   end
@@ -71,7 +71,7 @@ end
 
 puts "Connect users to books through copies..."
 User.all.each do |user|
-  4.times do
+  2.times do
     book = Book.find(Book.ids.sample)
     user.books << book unless user.books.include? book
   end
