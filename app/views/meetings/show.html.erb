@@ -10,7 +10,7 @@
     </div>
     <br>
     <p class="fs-3 text"><%= @location.name %></p>
-    <p class="mb-0">Address:</p>
+    <h5 class="mb-0">Address:</h5>
     <p class="fs-5 text"><%= @location.address %></p>
     <hr>
     <h4>Status:</h4>
@@ -18,11 +18,11 @@
     <% if @deliverer == current_user %>
       <div class="container d-flex justify-content-center align-items-center gap-3">
         <button type="button" class="btn btn-success mb-3 text-white">Confirm</button>
-        <span>or</span>
+        <%# <span>or</span> %>
         <button type="button" class="btn btn-danger mb-3 text-white">Reject</button>
       </div>
     <% else %>
-      <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status %>...</button>
+      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status %>...</button>
     <% end %>
     <div class="container d-flex justify-content-center align-items-center mt-1">
       <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>

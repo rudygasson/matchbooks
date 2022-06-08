@@ -8,11 +8,11 @@
     <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
       <% @copies.reverse.each do |copy| %>
         <div class="col g-3">
-          <div class="card h-100">
+          <div class="card h-100 text-center">
             <%= link_to book_path(copy.book) do %>
                 <img src="<%= copy.book.cover_image %>" class="card-img-top" alt="book card">
                 <div class="card-body">
-                  <p class="card-text"><small><em><%= copy.book.author %></em></small></p>
+                  <p class="card-text"><%= copy.book.author %></p>
                 </div>
             <% end %>
             <div class="card-footer mt-auto">

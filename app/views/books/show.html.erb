@@ -3,14 +3,12 @@
     <img src=<%= @book.cover_image %> alt="book cover" class="mb-3">
     <h2><%= @book.title %></h2>
     <p>by <em><%= @book.author %></em></p>
-    <span><small>Published:</small></span>
-    <p><%= @book.year %></p>
-    <span>Description:</span>
     <div data-controller="read-more">
-      <div data-read-more-target="shortText">
+    <span><small><b>Published:</b> <%= @book.year %></small></span>
+      <div data-read-more-target="shortText" style="text-align:left">
         <small><%= truncate(@book.description, length: 100) %></small>
       </div>
-      <div data-read-more-target="longText">
+      <div data-read-more-target="longText" style="text-align:left">
         <small><%= @book.description %></small>
       </div>
       <button type="button" class="btn btn-link btn-sm" data-read-more-target="moreButton" data-action="read-more#showMore">
