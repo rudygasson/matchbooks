@@ -24,10 +24,15 @@
     <% else %>
       <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status %>...</button>
     <% end %>
-    <div class="container d-flex justify-content-center align-items-center">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@receiver.id}", class: "avatar-bordered avatar-large"%>
-      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff;">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@deliverer.id}", class: "avatar-bordered avatar-large"%>
+    <div class="container d-flex justify-content-center align-items-center mt-1">
+      <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff">
+      <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center mb-1">
+      <span class="avatar-large"><%= @deliverer.username %></span>
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
+      <span class="avatar-large"><%= @receiver.username %></span>
     </div>
     <%# chat start %>
     <h4>Chat:</h4>
@@ -58,15 +63,30 @@
   </div>
   <div class="container">
     <h4>Books:</h4>
-    <% @handovers.each do |handover| %>
-      <% book = handover.copy.book %>
-      <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
-          <img src="<%= book.thumbnail %>" alt="book card">
-          <div class="card-book-infos">
-            <h2><%= "#{book.title}"%></h2>
-            <p><%= book.author %></p>
+    <% if @handovers.count > 0 %>
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+        <% @handovers.each do |handover| %>
+          <% book = handover.copy.book %>
+          <div class="col g-3">
+            <div class="card h-100">
+              <%= link_to book_path(book) do %>
+                  <img src="<%= book.cover_image %>" class="card-img-top" alt="book card">
+                  <div class="card-body">
+                    <p class="card-text"><small><em><%= book.author %></em></small></p>
+                  </div>
+              <% end %>
+              <div class="card-footer mt-auto visually-hidden">
+                <small class="text-muted">
+                  <span class="material-symbols-outlined">event_available</span>
+                  <span class="material-symbols-outlined">delete</span>
+                </small>
+              </div>
+            </div>
           </div>
-      <% end %>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
     <% end %>
   </div>
 </div>

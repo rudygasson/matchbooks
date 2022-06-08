@@ -2,32 +2,67 @@
   <div class="book-cover">
     <img src=<%= @book.cover_image %> alt="book cover" class="mb-3">
     <h2><%= @book.title %></h2>
-    <p>by <%= @book.author %></p>
-    <span>Description:</span>
-    <p><%= @book.description %></p>
-    <span>Published:</span>
+    <p>by <em><%= @book.author %></em></p>
+    <span><small>Published:</small></span>
     <p><%= @book.year %></p>
-    <span>ISBN:</span>
-    <p><%= @book.isbn %></p>
+    <span>Description:</span>
+    <div data-controller="read-more">
+      <div data-read-more-target="shortText">
+        <small><%= truncate(@book.description, length: 100) %></small>
+      </div>
+      <div data-read-more-target="longText">
+        <small><%= @book.description %></small>
+      </div>
+      <button type="button" class="btn btn-link btn-sm" data-read-more-target="moreButton" data-action="read-more#showMore">
+        Show more
+      </button>
+      <button type="button" class="btn btn-link btn-sm" data-read-more-target="lessButton" data-action="read-more#showLess">
+        Show less
+      </button>
+    </div>
   </div>
   <hr>
   <div class="container">
     <h1>Locations:</h1>
+    <%# accordion %>
     <% if @locations_uniq.empty? %>
       <p><em>Sorry, but this book is currently not available...</em></p>
     <% else %>
+      <%# iterate over available locations %>
       <% @locations_uniq.each do |location| %>
-        <div class="container mb-3">
-          <h4 class="m-0"><%= location.name %></h4>
-          <%# show users that offer the book at this location %>
-          <p class="m-0">Set up a meeting with:</p>
-          <% location.users.each do |user| %>
-            <% if (user.copies.find_by book_id: params[:id]) %>
-              <% unless user == current_user %>
-                <%= link_to user.username, new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])) %>
-              <% end %>
-            <% end %>
-          <% end %>
+        <div class="accordion accordion-flush">
+          <div class="accordion-item mt-2">
+            <div class="accordion-header" id="flush-heading<%= location.id %>">
+              <div class="button collapsed card-location text-white"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse<%= location.id %>"
+                    aria-expanded="false"
+                    aria-controls="flush-collapse<%= location.id %>"
+              >
+                <%= location.name %>
+                <span class="fs-6 card-location-users"><i class="fa-solid fa-user-group"></i> <%= (location.users & @location_book_users_uniq).count %></span>
+              </div>
+            </div>
+            <div id="flush-collapse<%= location.id %>" class="accordion-collapse collapse" aria-labelledby="flush-heading<%= location.id %>" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body bg-white">
+                <%# show users that offer the book at this location %>
+                <p class="mb-2"><small>Set up a meeting with:</small></p>
+                <%# iterate over available users at location %>
+                <% location.users.each do |user| %>
+                  <% if (user.copies.find_by book_id: params[:id]) %>
+                    <% unless user == current_user %>
+                      <%= link_to new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])), class: "text-decoration-none" do %>
+                        <div class="btn-user d-flex align-items-center mb-1 gap-2 border rounded p-1" >
+                          <%= image_tag user.avatar, class: "avatar" %>
+                          <small class="text-black"><%= user.username %></small>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>

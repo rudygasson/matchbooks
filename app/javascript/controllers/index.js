@@ -15,3 +15,9 @@ application.register("map", MapController)
 
 import ScannerController from "./scanner_controller.js"
 application.register("scanner", ScannerController)
+
+import ReadMoreController from "./read_more_controller.js"
+application.register("read-more", ReadMoreController)
+
+import UpdateAreaController from "./update_area_controller.js"
+application.register("update-area", UpdateAreaController)

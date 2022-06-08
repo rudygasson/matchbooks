@@ -1,23 +1,25 @@
-<div class="container">
+<div class="container" data-controller="update-area">
   <h1 class="text-center font-logo">matchbooks</h1>
   <h4 class="text-center">Find books in your area</h4>
   <div class="container">
     <div class="row mx-auto">
-      <%= form_tag root_path, method: :get, class: "d-flex" do %>
-        <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {class: "col-4"} %>
-        <%= text_field_tag :query,
-                            params[:query],
-                            class: "form-control",
-                            placeholder: "Search here" %>
-        <%= button_tag class: "btn btn-success" do %>
+      <%= form_tag root_path, method: :get do %>
+          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {"class" => "col-12 form-select", "data-action" => "change->update-area#refresh", "data-update-area-target" => "select" } %>
+        <div class="d-flex">
+          <%= text_field_tag :query,
+                              params[:query],
+                              class: "form-control",
+                              placeholder: "Search here" %>
+          <%= button_tag class: "btn btn-success" do %>
           <i class='fas fa-search'></i>
+        </div>
         <% end %>
       <% end %>
     </div>
   </div>
   <br>
   <hr>
-  <div class="container">
+  <div class="container" data-update-area-target="bookList">
     <% if (@search_term != nil && @search_term != "") && @search_district != "All areas" %>
       <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %>:</h3>
     <% elsif (@search_term != nil && @search_term != "") && @search_district == "All areas" %>
@@ -28,20 +30,29 @@
       <h3 class="text-center">Latest books in Berlin:</h3>
     <% end %>
 
-    <div class="row">
-      <% if @filtered_books.count > 0 %>
+    <% if @filtered_books.count > 0 %>
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
         <% @filtered_books.reverse.each do |book| %>
-          <%= link_to book_path(book, district: params[:district]), class: "card-book my-1 p-1" do %>
-              <img src="<%= book.thumbnail %>" alt="book card">
-              <div class="card-book-infos">
-                <h2><%= "#{book.title}"%></h2>
-                <p><%= book.author %></p>
+          <div class="col g-3">
+            <div class="card h-100">
+              <%= link_to book_path(book, district: params[:district]) do %>
+                  <img src="<%= book.cover_image %>" class="card-img-top" alt="book card">
+                  <div class="card-body">
+                    <p class="card-text"><small><em><%= book.author %></em></small></p>
+                  </div>
+              <% end %>
+              <div class="card-footer mt-auto visually-hidden">
+                <small class="text-muted">
+                  <span class="material-symbols-outlined">event_available</span>
+                  <span class="material-symbols-outlined">delete</span>
+                </small>
               </div>
-          <% end %>
+            </div>
+          </div>
         <% end %>
-      <% else %>
-        <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
-      <% end %>
-    </div>
+      </div>
+    <% else %>
+      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+    <% end %>
   </div>
 </div>
