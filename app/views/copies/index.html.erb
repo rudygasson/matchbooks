@@ -4,8 +4,8 @@
   <div class="d-flex justify-content-center">
     <%= link_to "Add a book", new_copy_path, class: "btn btn-success" %>
   </div>
-  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
-    <% if @copies.count > 0 %>
+  <% if @copies.count > 0 %>
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
       <% @copies.reverse.each do |copy| %>
         <div class="col g-3">
           <div class="card h-100">
@@ -25,8 +25,8 @@
           </div>
         </div>
       <% end %>
-    <% else %>
-      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
-    <% end %>
-  </div>
+    </div>
+  <% else %>
+    <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+  <% end %>
 </div>
