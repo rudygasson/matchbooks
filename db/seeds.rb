@@ -1,14 +1,18 @@
-puts "Add 5 Users..."
 users_with_avatar = {
   sebi: "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512",
   oliver: "https://ca.slack-edge.com/T02NE0241-USL1K1LKA-94322c3f7d7c-512",
   thibault: "https://ca.slack-edge.com/T02NE0241-U016C685S3U-518502b630b9-192",
   nina: "https://ca.slack-edge.com/T02NE0241-U0160CHLQ14-c8e3ee5c6d61-512",
-  pato: "https://ca.slack-edge.com/T02NE0241-U01BHAWKMDZ-5728ee214b68-512"
+  pato: "https://ca.slack-edge.com/T02NE0241-U01BHAWKMDZ-5728ee214b68-512",
+  rudy: "https://ca.slack-edge.com/T02NE0241-U03A9UJ0N49-8e2ce1267830-512",
+  helio: "https://ca.slack-edge.com/T02NE0241-U03AP03SHAQ-cf140c035077-512",
+  soma: "https://ca.slack-edge.com/T02NE0241-U039QMQ6022-b2463a4c9158-512",
+  philipp: "https://ca.slack-edge.com/T02NE0241-U039QLUS77Y-f472821e2f94-512"
 }
 
+puts "Add #{users_with_avatar.count} Users..."
 users_with_avatar.each do |key, value|
-  User.create!(
+  User.create(
     username: key.capitalize,
     email: "#{key}@test.com",
     password: "123456",
@@ -17,31 +21,31 @@ users_with_avatar.each do |key, value|
 end
 
 puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
-Location.create!(
+Location.create(
   name: "Heartspace Coffee",
   address: "Urbanstraße 70a, 10967 Berlin",
   district: "Neukölln",
   zipcode: 10_967
 )
-Location.create!(
+Location.create(
   name: "Café bRICK",
   address: "Lenaustraße 1, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
-Location.create!(
+Location.create(
   name: "KulturCafé",
   address: "Friedelstraße 28, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
-Location.create!(
+Location.create(
   name: "Books & Bagels",
   address: "Warschauer Str. 74, 10243 Berlin",
   district: "Friedrichshain-Kreuzberg",
   zipcode: 10_243
 )
-Location.create!(
+Location.create(
   name: "LeWagon",
   address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
   district: "Mitte",

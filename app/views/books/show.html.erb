@@ -2,13 +2,24 @@
   <div class="book-cover">
     <img src=<%= @book.cover_image %> alt="book cover" class="mb-3">
     <h2><%= @book.title %></h2>
-    <p>by <%= @book.author %></p>
-    <span>Description:</span>
-    <p><small><%= @book.description %></small></p>
-    <span>Published:</span>
+    <p>by <em><%= @book.author %></em></p>
+    <span><small>Published:</small></span>
     <p><%= @book.year %></p>
-    <span>ISBN:</span>
-    <p><%= @book.isbn %></p>
+    <span>Description:</span>
+    <div data-controller="read-more">
+      <div data-read-more-target="shortText">
+        <small><%= truncate(@book.description, length: 100) %></small>
+      </div>
+      <div data-read-more-target="longText">
+        <small><%= @book.description %></small>
+      </div>
+      <button type="button" class="btn btn-link btn-sm" data-read-more-target="moreButton" data-action="read-more#showMore">
+        Show more
+      </button>
+      <button type="button" class="btn btn-link btn-sm" data-read-more-target="lessButton" data-action="read-more#showLess">
+        Show less
+      </button>
+    </div>
   </div>
   <hr>
   <div class="container">
@@ -27,7 +38,6 @@
                     data-bs-target="#flush-collapse<%= location.id %>"
                     aria-expanded="false"
                     aria-controls="flush-collapse<%= location.id %>"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1507550284711-08dadbf8621f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9vayUyMGNhZmV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60)"
               >
                 <%= location.name %>
                 <span class="fs-6 card-location-users"><i class="fa-solid fa-user-group"></i> <%= (location.users & @location_book_users_uniq).count %></span>
@@ -36,15 +46,15 @@
             <div id="flush-collapse<%= location.id %>" class="accordion-collapse collapse" aria-labelledby="flush-heading<%= location.id %>" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body bg-white">
                 <%# show users that offer the book at this location %>
-                <p><small class="m-0">Set up a meeting with:</small></p>
+                <p class="mb-2"><small>Set up a meeting with:</small></p>
                 <%# iterate over available users at location %>
                 <% location.users.each do |user| %>
                   <% if (user.copies.find_by book_id: params[:id]) %>
                     <% unless user == current_user %>
                       <%= link_to new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])), class: "text-decoration-none" do %>
-                        <div class="d-flex align-items-center mb-1 gap-1" >
+                        <div class="btn-user d-flex align-items-center mb-1 gap-2 border rounded p-1" >
                           <%= image_tag user.avatar, class: "avatar" %>
-                          <small><%= user.username %></small>
+                          <small class="text-black"><%= user.username %></small>
                         </div>
                       <% end %>
                     <% end %>
