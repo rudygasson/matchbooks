@@ -12,7 +12,7 @@ users_with_avatar = {
 
 puts "Add #{users_with_avatar.count} Users..."
 users_with_avatar.each do |key, value|
-  User.create!(
+  User.create(
     username: key.capitalize,
     email: "#{key}@test.com",
     password: "123456",
@@ -21,31 +21,31 @@ users_with_avatar.each do |key, value|
 end
 
 puts "Add 3 Locations in Neukölln, 1 in Kreuzberg and 1 in Mitte..."
-Location.create!(
+Location.create(
   name: "Heartspace Coffee",
   address: "Urbanstraße 70a, 10967 Berlin",
   district: "Neukölln",
   zipcode: 10_967
 )
-Location.create!(
+Location.create(
   name: "Café bRICK",
   address: "Lenaustraße 1, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
-Location.create!(
+Location.create(
   name: "KulturCafé",
   address: "Friedelstraße 28, 12047 Berlin",
   district: "Neukölln",
   zipcode: 12_047
 )
-Location.create!(
+Location.create(
   name: "Books & Bagels",
   address: "Warschauer Str. 74, 10243 Berlin",
   district: "Friedrichshain-Kreuzberg",
   zipcode: 10_243
 )
-Location.create!(
+Location.create(
   name: "LeWagon",
   address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
   district: "Mitte",
