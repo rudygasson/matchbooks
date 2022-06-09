@@ -1,17 +1,21 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-      <div class="form-add">
-        <h1>Add a new book to your library</h1>
-        <br>
-        <%# form_with url: copies_path, method: :post do |f| %>
-        <%= simple_form_for @book, url: copies_path, method: :post do |f| %>
-          <%= f.input :isbn %>
-          <div class='text-center'>
-            <%= f.button :submit, "Add Book", class: "btn btn-success rounded" %>
-          </div>
-        <% end %>
+  <div class="d-flex justify-content-center">
+    <div class="col-12 col-md-8 text-center" data-controller="scanner">
+      <h1>Add a new book to your library</h1>
+      <div class="scanner">
+        <div id="scan-video" data-scanner-target="scanVideo">
+        </div>
+        <div>
+          <a class="btn btn-success" id="startButton" data-action="click->scanner#init">Scan Now</a>
+          <a class="btn btn-warning" id="stopButton" data-action="click->scanner#stop">Stop Scan</a>
+        </div>
       </div>
     </div>
   </div>
+  <%= simple_form_for @book, url: copies_path, method: :post do |f| %>
+    <%= f.input :isbn %>
+    <div class='text-center'>
+      <%= f.button :submit, "Add Book", class: "btn btn-success rounded" %>
+    </div>
+  <% end %>
 </div>
