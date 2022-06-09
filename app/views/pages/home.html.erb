@@ -35,7 +35,7 @@
       <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
         <% @filtered_books.reverse.each do |book| %>
           <% if book.copies.count > 0 %>
-            <%= render 'bookcard', book: book %>
+            <%= render 'shared/bookcard', book: book %>
           <% end %>
         <% end %>
       </div>
