@@ -15,8 +15,8 @@ module BookDataHelper
     end
     book.year = vol["publishedDate"].slice(0, 4).to_i
     if vol["imageLinks"].nil?
-      book.thumbnail = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
-      book.cover_image = "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
+      book.thumbnail = "https://static.wikia.nocookie.net/deathmarch/images/6/60/No_Image_Available.png"
+      book.cover_image = "https://static.wikia.nocookie.net/deathmarch/images/6/60/No_Image_Available.png"
     else
       book.thumbnail = vol["imageLinks"]["thumbnail"]
       book.cover_image = "https://books.google.com/books/content/images/frontcover/#{g_id}?fife=w480-h960"

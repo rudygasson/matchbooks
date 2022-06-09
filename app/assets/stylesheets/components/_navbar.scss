@@ -13,19 +13,22 @@
 }
 
 .navbar-font-logo {
-  font-family: 'Kanit', sans-serif;
-  color: #c13f35;
+  font-family: 'DM Serif Display';
+  color: black;
   text-decoration: none;
-  text-shadow: -1px 1px #545454;
-  font-size: 36px;
+  font-size: 32px;
+}
+
+.navbar-font-logo-img {
+  height: 32px;
 }
 
 .navbar-font-logo:hover {
-  color: #c13f35;
+  color: black;
 }
 
 .navbar-menu-style {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Playfair Display', serif;
   background: #e6e6e6;
   font-size: 14px;
   text-decoration: none;
