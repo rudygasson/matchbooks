@@ -12,7 +12,7 @@
             <%= link_to book_path(copy.book) do %>
                 <img src="<%= copy.book.cover_image %>" class="card-img-top" alt="book card">
                 <div class="card-body">
-                  <p class="card-text"><%= copy.book.author %></p>
+                  <p class="card-text"><small><%= copy.book.author %></small></p>
                 </div>
             <% end %>
             <div class="card-footer mt-auto">
