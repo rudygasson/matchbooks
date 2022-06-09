@@ -5,12 +5,14 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
     @message.user = current_user
+    @handovers = Handover.where(meeting_id: @meeting)
+    @receiver = User.find(@handovers[0].receiver_id)
     authorize @message
     # raise
     if @message.save
       ChatroomChannel.broadcast_to(
         @chatroom,
-        render_to_string(partial: "message", locals: { message: @message })
+        render_to_string(partial: "message", locals: { message: @message, receiver: @receiver })
       )
       head :ok
     else

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :meetings, only: %i[index show new create] do
     resources :messages, only: %i[create]
   end
+  get "/meetings/:id/confirm", to: "meetings#confirm", as: "confirm_meeting"
+  get "/meetings/:id/cancel", to: "meetings#cancel", as: "cancel_meeting"
 end

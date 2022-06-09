@@ -23,4 +23,12 @@ class MeetingPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def confirm?
+    true
+  end
+
+  def cancel?
+    true
+  end
 end
