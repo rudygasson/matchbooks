@@ -453,5 +453,853 @@
         }
       }
     ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "1EiJAwAAQBAJ",
+    "etag": "aXKo5/KX95E",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/1EiJAwAAQBAJ",
+    "volumeInfo": {
+    "title": "Sapiens",
+    "subtitle": "A Brief History of Humankind",
+    "authors": [
+    "Yuval Noah Harari"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2014-09-04",
+    "description": "**THE MULTI-MILLION COPY BESTSELLER** 'Interesting and provocative... It gives you a sense of how briefly we've been on this Earth' Barack Obama What makes us brilliant? What makes us deadly? What makes us Sapiens? Yuval Noah Harari challenges everything we know about being human. Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it: us. In this bold and provocative book, Yuval Noah Harari explores who we are, how we got here and where we're going. The perfect gift for curious readers this Christmas. ________________ PRAISE FOR SAPIENS: 'Jaw-dropping from the first word to the last... It may be the best book I've ever read' Chris Evans 'Sweeps the cobwebs out of your brain... Radiates power and clarity' Sunday Times 'It altered how I view our species and our world' Guardian 'Startling... It changes the way you look at the world' Simon Mayo 'I would recommend Sapiens to anyone who's interested in the history and future of our species' Bill Gates **ONE OF THE GUARDIAN'S 100 BEST BOOKS OF THE 21st CENTURY**",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781448190690"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "144819069X"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": false
+    },
+    "pageCount": 512,
+    "printType": "BOOK",
+    "categories": [
+    "History"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 115,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.30.28.0.preview.2",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=1EiJAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=1EiJAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=1EiJAwAAQBAJ&printsec=frontcover&dq=isbn:9781448190690&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=1EiJAwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=1EiJAwAAQBAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=1EiJAwAAQBAJ&rdid=book-1EiJAwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/Sapiens-sample-epub.acsm?id=1EiJAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=1EiJAwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "It may be the best book I&#39;ve ever read&#39; Chris Evans &#39;Sweeps the cobwebs out of your brain... Radiates power and clarity&#39; Sunday Times &#39;It altered how I view our species and our world&#39; Guardian &#39;Startling."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "ar44DwAAQBAJ",
+    "etag": "PYXn3EQuFS0",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/ar44DwAAQBAJ",
+    "volumeInfo": {
+    "title": "21 Lessons for the 21st Century",
+    "authors": [
+    "Yuval Noah Harari"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2018-08-30",
+    "description": "**THE NUMBER ONE BESTSELLER** In twenty-one bite-sized lessons, Yuval Noah Harari explores what it means to be human in an age of bewilderment. '21 Lessons is, simply put, a crucial book' Adam Kay How can we protect ourselves from nuclear war, ecological cataclysms and technological disruptions? What can we do about the epidemic of fake news or the threat of terrorism? What should we teach our children? Yuval Noah Harari takes us on a thrilling journey through today's most urgent issues. The golden thread running through his exhilarating new book is the challenge of maintaining our collective and individual focus in the face of constant and disorienting change. Are we still capable of understanding the world we have created? 'Fascinating... compelling... [Harari] has teed up a crucial global conversation about how to take on the problems of the 21st century' Bill Gates, New York Times 'Truly mind-expanding... Ultra-topical' Guardian",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781473554719"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "1473554713"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": false
+    },
+    "pageCount": 432,
+    "printType": "BOOK",
+    "categories": [
+    "History"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 30,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.10.10.0.preview.2",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=ar44DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=ar44DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=ar44DwAAQBAJ&printsec=frontcover&dq=isbn:9781473554719&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ar44DwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ar44DwAAQBAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=ar44DwAAQBAJ&rdid=book-ar44DwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/21_Lessons_for_the_21st_Century-sample-epub.acsm?id=ar44DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=ar44DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "**THE NUMBER ONE BESTSELLER** In twenty-one bite-sized lessons, Yuval Noah Harari explores what it means to be human in an age of bewilderment."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "smbiogvIt9AC",
+    "etag": "amjTW3UMWq8",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/smbiogvIt9AC",
+    "volumeInfo": {
+    "title": "All You Need to Know about the Music Business",
+    "authors": [
+    "Donald S. Passman"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2006",
+    "description": "A guide to the music business and its legal issues provides real-world coverage of a wide range of topics, including teams of advisors, record deals, songwriting and music publishing, touring, and merchandising.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9780743293181"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "0743293185"
+    }
+    ],
+    "readingModes": {
+    "text": false,
+    "image": false
+    },
+    "pageCount": 440,
+    "printType": "BOOK",
+    "categories": [
+    "Music"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 7,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.0",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=smbiogvIt9AC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=smbiogvIt9AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=smbiogvIt9AC&printsec=frontcover&dq=isbn:9780743293181&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.de/books?id=smbiogvIt9AC&dq=isbn:9780743293181&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/All_You_Need_to_Know_about_the_Music_Bus.html?hl=&id=smbiogvIt9AC"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+    "isAvailable": false
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=smbiogvIt9AC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Called &quot;the industry bible&quot; by the Los Angeles Times, this newest edition is filled with vital information on the technological advances that are reshaping the business, and how novices and experts alike should manage such changes."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "8I4fw88skq0C",
+    "etag": "yQLi4VnXFM4",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/8I4fw88skq0C",
+    "volumeInfo": {
+    "title": "It's So Easy",
+    "subtitle": "And Other Lies",
+    "authors": [
+    "Duff McKagan"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2012-03-20",
+    "description": "A founding member of Guns N' Roses shares the story of his career and private life, covering the band's rise to fame, overcoming alcoholism, and his experiences as a husband and father.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781451606645"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "1451606648"
+    }
+    ],
+    "readingModes": {
+    "text": false,
+    "image": false
+    },
+    "pageCount": 384,
+    "printType": "BOOK",
+    "categories": [
+    "Biography & Autobiography"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 10,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.0",
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=8I4fw88skq0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=8I4fw88skq0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=8I4fw88skq0C&printsec=frontcover&dq=isbn:9781451606645&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.de/books?id=8I4fw88skq0C&dq=isbn:9781451606645&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/It_s_So_Easy.html?hl=&id=8I4fw88skq0C"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+    "isAvailable": false
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=8I4fw88skq0C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "A founding member of Guns N&#39; Roses shares the story of his career and private life, covering the band&#39;s rise to fame, overcoming alcoholism, and his experiences as a husband and father."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "j-4yDwAAQBAJ",
+    "etag": "YoZIeKDFQN8",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/j-4yDwAAQBAJ",
+    "volumeInfo": {
+    "title": "Factfulness",
+    "subtitle": "Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
+    "authors": [
+    "Hans Rosling",
+    "Anna Rosling Rönnlund",
+    "Ola Rosling"
+    ],
+    "publisher": "Flatiron Books",
+    "publishedDate": "2018-04-03",
+    "description": "INSTANT NEW YORK TIMES BESTSELLER “One of the most important books I’ve ever read—an indispensable guide to thinking clearly about the world.” – Bill Gates “Hans Rosling tells the story of ‘the secret silent miracle of human progress’ as only he can. But Factfulness does much more than that. It also explains why progress is so often secret and silent and teaches readers how to see it clearly.” —Melinda Gates \"Factfulness by Hans Rosling, an outstanding international public health expert, is a hopeful book about the potential for human progress when we work off facts rather than our inherent biases.\" - Former U.S. President Barack Obama Factfulness: The stress-reducing habit of only carrying opinions for which you have strong supporting facts. When asked simple questions about global trends—what percentage of the world’s population live in poverty; why the world’s population is increasing; how many girls finish school—we systematically get the answers wrong. So wrong that a chimpanzee choosing answers at random will consistently outguess teachers, journalists, Nobel laureates, and investment bankers. In Factfulness, Professor of International Health and global TED phenomenon Hans Rosling, together with his two long-time collaborators, Anna and Ola, offers a radical new explanation of why this happens. They reveal the ten instincts that distort our perspective—from our tendency to divide the world into two camps (usually some version of us and them) to the way we consume media (where fear rules) to how we perceive progress (believing that most things are getting worse). Our problem is that we don’t know what we don’t know, and even our guesses are informed by unconscious and predictable biases. It turns out that the world, for all its imperfections, is in a much better state than we might think. That doesn’t mean there aren’t real concerns. But when we worry about everything all the time instead of embracing a worldview based on facts, we can lose our ability to focus on the things that threaten us most. Inspiring and revelatory, filled with lively anecdotes and moving stories, Factfulness is an urgent and essential book that will change the way you see the world and empower you to respond to the crises and opportunities of the future. --- “This book is my last battle in my life-long mission to fight devastating ignorance...Previously I armed myself with huge data sets, eye-opening software, an energetic learning style and a Swedish bayonet for sword-swallowing. It wasn’t enough. But I hope this book will be.” Hans Rosling, February 2017.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781250123817"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "125012381X"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": false
+    },
+    "pageCount": 288,
+    "printType": "BOOK",
+    "categories": [
+    "Science"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 28,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.16.14.0.preview.2",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=j-4yDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=j-4yDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=j-4yDwAAQBAJ&printsec=frontcover&dq=isbn:9781250123817&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=j-4yDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=j-4yDwAAQBAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 12.19,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 8.53,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=j-4yDwAAQBAJ&rdid=book-j-4yDwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 12190000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 8530000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/Factfulness-sample-epub.acsm?id=j-4yDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=j-4yDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Previously I armed myself with huge data sets, eye-opening software, an energetic learning style and a Swedish bayonet for sword-swallowing. It wasn’t enough. But I hope this book will be.” Hans Rosling, February 2017."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "louZtAEACAAJ",
+    "etag": "Gv44Xzhl/B0",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/louZtAEACAAJ",
+    "volumeInfo": {
+    "title": "Music Theory",
+    "subtitle": "From Beginner to Expert - The Ultimate Step-By-Step Guide to Understanding and Learning Music Theory Effortlessly",
+    "authors": [
+    "Nicolas Carter"
+    ],
+    "publisher": "Createspace Independent Publishing Platform",
+    "publishedDate": "2018-03-17",
+    "description": "Unique, Simple and Straightforward Way to Learn Music Theory and Become a Better Musician, Even if You're a Total Beginner! * Updated and massively Expanded edition with Audio examples, new Exercises, and over 150 pages of NEW content! * ** On a special promo price for a limited time! ** Have you ever wanted: To know how understanding music theory can make you a better player (on any instrument)? To unlock the mysteries of notes, intervals, music scales, modes, keys, circle of fifths, chords and chord progressions, and other important concepts in music, and how they all relate to one another? To get a deep understanding of scales, modes and chords, where they come from, what are the different types that exist, how they're built, and how to use any chord or scale in your playing? To learn how rhythm works and how to master your rhythm and time skills that will make you sound like a pro? To know what's the magic behind all the beautiful music that you love and how you can (re)create it? To get a broad perspective of tonal harmony, and how melody, harmony, and rhythm work together? Understand advanced concepts (such as modal playing, atonality, polytonality, free music, etc.) that usually only advanced jazz musicians use? But... Have you ever been put off by music theory or thought that it wasn't necessary, boring or too hard to learn? If you find yourself in any of this, then this book is what you need. It covers pretty much everything that anyone who plays or wants to play music, and wishes to become a better musician, should know. This is one of the most comprehensive and straightforward, evergreen books on music theory that you can find, and you will wish to study it often and keep it forever. The book is structured in a way that is very easy to follow and internalize all the concepts that are explained. You don't have to be a college degree music student in order to understand and use any of this - anyone can do it, even a total beginner! It also doesn't matter what instrument(s) you play nor what is your level of knowledge or playing ability, because music theory is universal and all about what sounds good together! It explains the WHY and HOW, and it is your roadmap, a skill and a tool - guided by your ears - for creating beautiful music This book will give you what is necessary to become a true expert in music theory without frustration and feeling overwhelmed in the process, and this in-turn will have immense benefits to your playing and musicianship! Just use the look inside feature by clicking on the book cover to get a sneak peak of what you'll learn inside... Get this book now and solve all your problems with music theory, and become proficient in this field! Pick up your copy by clicking on the BUY now button at the top of this page.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_10",
+    "identifier": "1986061833"
+    },
+    {
+    "type": "ISBN_13",
+    "identifier": "9781986061834"
+    }
+    ],
+    "readingModes": {
+    "text": false,
+    "image": false
+    },
+    "pageCount": 192,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=louZtAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=louZtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=louZtAEACAAJ&dq=isbn:9781986061834&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.de/books?id=louZtAEACAAJ&dq=isbn:9781986061834&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Music_Theory.html?hl=&id=louZtAEACAAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": false
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=louZtAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "This is the most comprehensive and straightforward evergreen book on music theory that you can find - a book you&#39;ll wish to study and refer to often, and keep it forever."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "KKFTfEQ8bRAC",
+    "etag": "VH8GBUogZBM",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/KKFTfEQ8bRAC",
+    "volumeInfo": {
+    "title": "Harry Potter and the Goblet of Fire",
+    "authors": [
+    "J.K. Rowling"
+    ],
+    "publisher": "Pottermore Publishing",
+    "publishedDate": "2015-12-08",
+    "description": "'There will be three tasks, spaced throughout the school year, and they will test the champions in many different ways ... their magical prowess - their daring - their powers of deduction - and, of course, their ability to cope with danger.' The Triwizard Tournament is to be held at Hogwarts. Only wizards who are over seventeen are allowed to enter - but that doesn't stop Harry dreaming that he will win the competition. Then at Hallowe'en, when the Goblet of Fire makes its selection, Harry is amazed to find his name is one of those that the magical cup picks out. He will face death-defying tasks, dragons and Dark wizards, but with the help of his best friends, Ron and Hermione, he might just make it through - alive! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781781105672"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "1781105677"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": true
+    },
+    "pageCount": 734,
+    "printType": "BOOK",
+    "categories": [
+    "Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 70,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.23.22.0.preview.3",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=KKFTfEQ8bRAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=KKFTfEQ8bRAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=KKFTfEQ8bRAC&printsec=frontcover&dq=isbn:9781781105672&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=KKFTfEQ8bRAC&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=KKFTfEQ8bRAC"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 8.99,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 8.99,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=KKFTfEQ8bRAC&rdid=book-KKFTfEQ8bRAC&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 8990000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 8990000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/Harry_Potter_and_the_Goblet_of_Fire-sample-epub.acsm?id=KKFTfEQ8bRAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/Harry_Potter_and_the_Goblet_of_Fire-sample-pdf.acsm?id=KKFTfEQ8bRAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=KKFTfEQ8bRAC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "52jRePjZ8-oC",
+    "etag": "G38EwQisD0g",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/52jRePjZ8-oC",
+    "volumeInfo": {
+    "title": "The Craftsman",
+    "authors": [
+    "Richard Sennett"
+    ],
+    "publisher": "Penguin UK",
+    "publishedDate": "2009-02-05",
+    "description": "Why do people work hard, and take pride in what they do? This book, a philosophically-minded enquiry into practical activity of many different kinds past and present, is about what happens when people try to do a good job. It asks us to think about the true meaning of skill in the 'skills society' and argues that pure competition is a poor way to achieve quality work. Sennett suggests, instead, that there is a craftsman in every human being, which can sometimes be enormously motivating and inspiring - and can also in other circumstances make individuals obsessive and frustrated. The Craftsman shows how history has drawn fault-lines between craftsman and artist, maker and user, technique and expression, practice and theory, and that individuals' pride in their work, as well as modern society in general, suffers from these historical divisions. But the past lives of crafts and craftsmen show us ways of working (using tools, acquiring skills, thinking about materials) which provide rewarding alternative ways for people to utilise their talents. We need to recognise this if motivations are to be understood and lives made as fulfilling as possible.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9780141919416"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "0141919418"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": false
+    },
+    "pageCount": 336,
+    "printType": "BOOK",
+    "categories": [
+    "Social Science"
+    ],
+    "averageRating": 2.5,
+    "ratingsCount": 8,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.4.3.0.preview.2",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=52jRePjZ8-oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=52jRePjZ8-oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=52jRePjZ8-oC&printsec=frontcover&dq=isbn:9780141919416&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC&rdid=book-52jRePjZ8-oC&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/The_Craftsman-sample-epub.acsm?id=52jRePjZ8-oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=52jRePjZ8-oC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Why do people work hard, and take pride in what they do? This book, a philosophically-minded enquiry into practical activity of many different kinds past and present, is about what happens when people try to do a good job."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "JvNIEAAAQBAJ",
+    "etag": "8DiYx83GkO8",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/JvNIEAAAQBAJ",
+    "volumeInfo": {
+    "title": "The Uses of Disorder",
+    "subtitle": "Personal Identity and City Life",
+    "authors": [
+    "Richard Sennett"
+    ],
+    "publisher": "Verso Books",
+    "publishedDate": "2021-11-16",
+    "description": "Reissue of the classic text on how cities should be planned When first published in 1970, The Uses of Disorder, was a call to arms against the deadening hand of modernist urban planning upon the thriving chaotic city. Written in the aftermath of the 1968 student uprising in the US and Europe, it demands a reimagination of the city and how class, city life and identity combine. Too often, this leads to divisions, such as the middle class flight to the suburbs, leaving the inner cities in desperate straits. In response, Sennett offers an alternative image of a \"dense, disorderly, overwhelming cities\" that allow for change and the development of community. Fifty years later this book is as essential as it was when it first came out, and remains an inspiration to architects, planners and urban thinkers everywhere.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781839764080"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "1839764082"
+    }
+    ],
+    "readingModes": {
+    "text": false,
+    "image": false
+    },
+    "pageCount": 224,
+    "printType": "BOOK",
+    "categories": [
+    "Political Science"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=JvNIEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=JvNIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=JvNIEAAAQBAJ&printsec=frontcover&dq=isbn:9781839764080&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.de/books?id=JvNIEAAAQBAJ&dq=isbn:9781839764080&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Uses_of_Disorder.html?hl=&id=JvNIEAAAQBAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": false
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=JvNIEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Fifty years later this book is as essential as it was when it first came out, and remains an inspiration to architects, planners and urban thinkers everywhere."
+    }
+    }
+    ]
   }
 ]
