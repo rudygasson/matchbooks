@@ -14,26 +14,36 @@
     <p class="fs-5 text"><%= @location.address %></p>
     <hr>
     <h4>Status:</h4>
-    <%# still needs condition for all status designs %>
-    <% if @deliverer == current_user %>
+    <% if current_user == @deliverer && @meeting.status == "pending"  %>
       <div class="container d-flex justify-content-center align-items-center gap-3">
-        <button type="button" class="btn btn-success mb-3 text-white">Confirm</button>
-        <%# <span>or</span> %>
-        <button type="button" class="btn btn-danger mb-3 text-white">Reject</button>
+        <%= link_to "Confirm", confirm_meeting_path(@meeting), class: "btn btn-success mb-3 text-white" %>
+        <span>or</span>
+        <%= link_to "Reject", cancel_meeting_path(@meeting), class: "btn btn-danger mb-3 text-white" %>
       </div>
-    <% else %>
-      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status %>...</button>
+    <% elsif current_user == @deliverer && @meeting.status == "cancelled" %>
+      <button type="button" class="btn btn-danger mb-3 text-white" disabled><%= @meeting.status.capitalize %></button>
+    <% elsif current_user == @deliverer && @meeting.status == "confirmed" %>
+      <button type="button" class="btn btn-success mb-3 text-white" disabled><%= @meeting.status.capitalize %></button>
+    <% elsif current_user == @receiver && @meeting.status == "pending" %>
+      <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status.capitalize %></button>
+    <% elsif current_user == @receiver && @meeting.status == "cancelled" %>
+      <button type="button" class="btn btn-danger mb-3 text-white" disabled><%= @meeting.status.capitalize %></button>
+    <% elsif current_user == @receiver && @meeting.status == "confirmed" %>
+      <button type="button" class="btn btn-success mb-3 text-white" disabled><%= @meeting.status.capitalize %></button>
     <% end %>
+
     <div class="container d-flex justify-content-center align-items-center mt-1">
       <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
       <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff">
       <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
     </div>
     <div class="container d-flex justify-content-center align-items-center mb-1">
-      <span class="avatar-large"><%= @deliverer.username %></span>
-      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
       <span class="avatar-large"><%= @receiver.username %></span>
+      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
+      <span class="avatar-large"><%=  @deliverer.username %></span>
     </div>
+
+
     <%# chat start %>
     <h4>Chat:</h4>
     <div class="container chatroom"
@@ -42,7 +52,7 @@
     >
       <div class="messages" data-chatroom-subscription-target="messages">
         <% @chatroom.messages.each do |message| %>
-          <%= render "messages/message", message: message %>
+          <%= render "messages/message", { message: message, receiver: @receiver } %>
         <% end %>
       </div>
       <%= simple_form_for [@meeting, @message],

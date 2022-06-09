@@ -55,6 +55,20 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def confirm
+    @meeting = Meeting.find(params[:id])
+    @meeting.update! status: 2
+    redirect_to meeting_path(@meeting)
+    authorize @meeting
+  end
+
+  def cancel
+    @meeting = Meeting.find(params[:id])
+    @meeting.update! status: 1
+    redirect_to meeting_path(@meeting)
+    authorize @meeting
+  end
+
   private
 
   def meeting_params
