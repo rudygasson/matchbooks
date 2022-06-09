@@ -19,11 +19,15 @@ $headers-font: "Playfair Display", "serif";
 // general font configs
 
 .font-logo {
-  font-family: 'Kanit', sans-serif;
-  color: #c13f35;
+  font-family: 'DM Serif Display';
+  color: #000000;
   text-decoration: none;
-  text-shadow: -1px 1px #545454;
-  font-size: 48px;
+  // text-shadow: -1px 1px #545454;
+  font-size: 44px;
+}
+
+.font-logo-img {
+  height: 44px;
 }
 
 .font-slogan {
