@@ -4,7 +4,7 @@
     <h2><%= @book.title %></h2>
     <p>by <em><%= @book.author %></em></p>
     <div data-controller="read-more">
-    <span><small><b>Published:</b> <%= @book.year %></small></span>
+    <span style="text-align:left"><small><b>Published:</b> <%= @book.year %></small></span>
       <div data-read-more-target="shortText" style="text-align:left">
         <small><%= truncate(@book.description, length: 100) %></small>
       </div>
