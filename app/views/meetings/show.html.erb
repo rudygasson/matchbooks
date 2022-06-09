@@ -23,13 +23,13 @@
     <% elsif current_user == @deliverer && @meeting.status == "cancelled" %>
       <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
     <% elsif current_user == @deliverer && @meeting.status == "confirmed" %>
-      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status.capitalize %></button>
+      <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
     <% elsif current_user == @receiver && @meeting.status == "pending" %>
-      <button type="button" class="btn btn-primary mb-3" disabled><%= @meeting.status.capitalize %></button>
+      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status.capitalize %></button>
     <% elsif current_user == @receiver && @meeting.status == "cancelled" %>
       <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
     <% elsif current_user == @receiver && @meeting.status == "confirmed" %>
-      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status.capitalize %></button>
+      <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
     <% end %>
 
     <div class="container d-flex justify-content-center align-items-center mt-1">
