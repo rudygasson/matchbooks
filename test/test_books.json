@@ -1114,5 +1114,192 @@
     }
     }
     ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "52jRePjZ8-oC",
+    "etag": "G38EwQisD0g",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/52jRePjZ8-oC",
+    "volumeInfo": {
+    "title": "The Craftsman",
+    "authors": [
+    "Richard Sennett"
+    ],
+    "publisher": "Penguin UK",
+    "publishedDate": "2009-02-05",
+    "description": "Why do people work hard, and take pride in what they do? This book, a philosophically-minded enquiry into practical activity of many different kinds past and present, is about what happens when people try to do a good job. It asks us to think about the true meaning of skill in the 'skills society' and argues that pure competition is a poor way to achieve quality work. Sennett suggests, instead, that there is a craftsman in every human being, which can sometimes be enormously motivating and inspiring - and can also in other circumstances make individuals obsessive and frustrated. The Craftsman shows how history has drawn fault-lines between craftsman and artist, maker and user, technique and expression, practice and theory, and that individuals' pride in their work, as well as modern society in general, suffers from these historical divisions. But the past lives of crafts and craftsmen show us ways of working (using tools, acquiring skills, thinking about materials) which provide rewarding alternative ways for people to utilise their talents. We need to recognise this if motivations are to be understood and lives made as fulfilling as possible.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9780141919416"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "0141919418"
+    }
+    ],
+    "readingModes": {
+    "text": true,
+    "image": false
+    },
+    "pageCount": 336,
+    "printType": "BOOK",
+    "categories": [
+    "Social Science"
+    ],
+    "averageRating": 2.5,
+    "ratingsCount": 8,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.4.3.0.preview.2",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=52jRePjZ8-oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=52jRePjZ8-oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=52jRePjZ8-oC&printsec=frontcover&dq=isbn:9780141919416&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amount": 9.49,
+    "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=52jRePjZ8-oC&rdid=book-52jRePjZ8-oC&rdot=1&source=gbs_api",
+    "offers": [
+    {
+    "finskyOfferType": 1,
+    "listPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "retailPrice": {
+    "amountInMicros": 9490000,
+    "currencyCode": "EUR"
+    },
+    "giftable": true
+    }
+    ]
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": true,
+    "acsTokenLink": "http://books.google.de/books/download/The_Craftsman-sample-epub.acsm?id=52jRePjZ8-oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=52jRePjZ8-oC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Why do people work hard, and take pride in what they do? This book, a philosophically-minded enquiry into practical activity of many different kinds past and present, is about what happens when people try to do a good job."
+    }
+    }
+    ]
+  },
+  {
+    "kind": "books#volumes",
+    "totalItems": 1,
+    "items": [
+    {
+    "kind": "books#volume",
+    "id": "JvNIEAAAQBAJ",
+    "etag": "8DiYx83GkO8",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/JvNIEAAAQBAJ",
+    "volumeInfo": {
+    "title": "The Uses of Disorder",
+    "subtitle": "Personal Identity and City Life",
+    "authors": [
+    "Richard Sennett"
+    ],
+    "publisher": "Verso Books",
+    "publishedDate": "2021-11-16",
+    "description": "Reissue of the classic text on how cities should be planned When first published in 1970, The Uses of Disorder, was a call to arms against the deadening hand of modernist urban planning upon the thriving chaotic city. Written in the aftermath of the 1968 student uprising in the US and Europe, it demands a reimagination of the city and how class, city life and identity combine. Too often, this leads to divisions, such as the middle class flight to the suburbs, leaving the inner cities in desperate straits. In response, Sennett offers an alternative image of a \"dense, disorderly, overwhelming cities\" that allow for change and the development of community. Fifty years later this book is as essential as it was when it first came out, and remains an inspiration to architects, planners and urban thinkers everywhere.",
+    "industryIdentifiers": [
+    {
+    "type": "ISBN_13",
+    "identifier": "9781839764080"
+    },
+    {
+    "type": "ISBN_10",
+    "identifier": "1839764082"
+    }
+    ],
+    "readingModes": {
+    "text": false,
+    "image": false
+    },
+    "pageCount": 224,
+    "printType": "BOOK",
+    "categories": [
+    "Political Science"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+    },
+    "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/content?id=JvNIEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/content?id=JvNIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.de/books?id=JvNIEAAAQBAJ&printsec=frontcover&dq=isbn:9781839764080&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.de/books?id=JvNIEAAAQBAJ&dq=isbn:9781839764080&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Uses_of_Disorder.html?hl=&id=JvNIEAAAQBAJ"
+    },
+    "saleInfo": {
+    "country": "DE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+    },
+    "accessInfo": {
+    "country": "DE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+    "isAvailable": false
+    },
+    "pdf": {
+    "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=JvNIEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+    "textSnippet": "Fifty years later this book is as essential as it was when it first came out, and remains an inspiration to architects, planners and urban thinkers everywhere."
+    }
+    }
+    ]
   }
 ]
