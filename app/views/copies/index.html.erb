@@ -7,23 +7,7 @@
   <% if @copies.count > 0 %>
     <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
       <% @copies.reverse.each do |copy| %>
-        <div class="col g-3">
-          <div class="card h-100">
-            <%= link_to book_path(copy.book) do %>
-                <img src="<%= copy.book.cover_image %>" class="card-img-top" alt="book card">
-                <div class="card-body">
-                  <p class="card-text"><small><em><%= copy.book.author %></em></small></p>
-                </div>
-            <% end %>
-            <div class="card-footer mt-auto">
-              <small class="text-muted">
-                <%= link_to copy_path(copy), class: "fs-6 card-location-users", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <i class="fa-solid fa-trash-can"></i>
-                <% end %>
-              </small>
-            </div>
-          </div>
-        </div>
+        <%= render 'shared/bookcard', book: copy.book, copy: copy %>
       <% end %>
     </div>
   <% else %>
