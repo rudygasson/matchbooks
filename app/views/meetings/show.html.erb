@@ -9,9 +9,15 @@
       data-map-markers-value="<%= @markers.to_json %>">
     </div>
     <br>
-    <p class="fs-3 text"><%= @location.name %></p>
-    <p class="mb-0">Address:</p>
-    <p class="fs-5 text"><%= @location.address %></p>
+    <p class="fs-2 text"><%= @location.name %></p>
+    <div class="mb-0">
+      <p class="mb-0">Address:</p>
+      <p class="fs-5 text"><%= @location.address %></p>
+    </div>
+    <div class="mb-0">
+      <p class="mb-0">Date:</p>
+      <p class="fs-5 text"><%= "#{@meeting.date}, #{"%02d" % @meeting.time.hour}:#{"%02d" % @meeting.time.min}" %></p>
+    </div>
     <hr>
     <h4>Status:</h4>
     <% if current_user == @deliverer && @meeting.status == "pending"  %>
@@ -74,10 +80,10 @@
   <div class="container">
     <h4>Books:</h4>
     <% if @handovers.count > 0 %>
-      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+      <div class="row justify-content-center">
         <% @handovers.each do |handover| %>
           <% book = handover.copy.book %>
-          <div class="col g-3">
+          <div class="col-6">
             <div class="card h-100">
               <%= link_to book_path(book) do %>
                   <img src="<%= book.cover_image %>" class="card-img-top" alt="book card">
