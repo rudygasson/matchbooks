@@ -8,7 +8,7 @@
   <h3 class="text-center">Latest books in Berlin:</h3>
 <% end %>
 <% if @filtered_books.count > 0 %>
-  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+  <div class="cards-grid">
     <% @filtered_books.reverse.each do |book| %>
       <%= render 'shared/bookcard', book: book %>
     <% end %>

@@ -1,16 +1,13 @@
-<div class="container">
-  <h1 class="text-center">My library</h1>
-  <br>
-  <div class="d-flex justify-content-center">
-    <%= link_to "Add a book", new_copy_path, class: "btn btn-success" %>
-  </div>
-  <% if @copies.count > 0 %>
-    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
-      <% @copies.reverse.each do |copy| %>
-        <%= render 'shared/bookcard', book: copy.book, copy: copy %>
-      <% end %>
-    </div>
-  <% else %>
-    <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
-  <% end %>
+<div class="text-center">
+  <h1>My library</h1>
+  <%= link_to "Add a book", new_copy_path, class: "btn btn-success my-4" %>
 </div>
+<% if @copies.count > 0 %>
+  <div class="cards-grid">
+    <% @copies.reverse.each do |copy| %>
+      <%= render 'shared/bookcard', book: copy.book, copy: copy %>
+    <% end %>
+  </div>
+<% else %>
+  <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+<% end %>

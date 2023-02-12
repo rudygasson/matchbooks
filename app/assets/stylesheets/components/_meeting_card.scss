@@ -1,0 +1,40 @@
+.meeting-card {
+  overflow: hidden;
+  background: #f6f6f6;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.meeting-card-avatar img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.meeting-card-avatar {
+  height: 100%;
+}
+
+.meeting-card-infos {
+  width: 80%;
+  text-decoration: none;
+}
+
+.meeting-card-infos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.meeting-card-infos p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: .7;
+  margin: 0;
+  text-decoration: none;
+}

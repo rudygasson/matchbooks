@@ -1,25 +1,24 @@
-<div class="container">
+<div class="container my-2">
   <h1 class="text-center">My meetings</h1>
-
-  <div class="row">
-    <% if @meetings.count > 0 %>
-      <% @meetings.each do |meeting| %>
-        <%= link_to meeting_path(meeting), class: "card-book my-1 p-1" do %>
-          <% if current_user == meeting.handovers[0].receiver  %>
-            <% partner_user = meeting.handovers[0].deliverer %>
-          <% elsif current_user == meeting.handovers[0].deliverer  %>
-            <% partner_user = meeting.handovers[0].receiver %>
-          <% end %>
-          <%= image_tag partner_user.avatar, class: "avatar-bordered avatar-large" %>
-          <div class="card-book-infos">
-            <h2><%= partner_user.username %></h2>
-            <p><%= "#{meeting.date}, #{"%02d" % meeting.time.hour}:#{"%02d" % meeting.time.min}" %> at <%= meeting.location.name %></p>
-            <p><%= meeting.status %></p>
-          </div>
+  <% if @meetings.count > 0 %>
+    <% @meetings.each do |meeting| %>
+      <%= link_to meeting_path(meeting), class: "meeting-card my-2 p-2" do %>
+        <% if current_user == meeting.handovers[0].receiver  %>
+          <% partner_user = meeting.handovers[0].deliverer %>
+        <% elsif current_user == meeting.handovers[0].deliverer  %>
+          <% partner_user = meeting.handovers[0].receiver %>
         <% end %>
+        <div class="meeting-card-avatar p-2">
+          <%= image_tag partner_user.avatar %>
+        </div>
+        <div class="meeting-card-infos p-2">
+          <h2><%= partner_user.username %></h2>
+          <p><%= "#{meeting.date}, #{"%02d" % meeting.time.hour}:#{"%02d" % meeting.time.min}" %> at <%= meeting.location.name %></p>
+          <p><%= meeting.status %></p>
+        </div>
       <% end %>
-    <% else %>
-      <p class="text-center"><em>There aren't any meetings scheduled for now.</em></p>
     <% end %>
-  </div>
+  <% else %>
+    <p class="text-center"><em>There aren't any meetings scheduled for now.</em></p>
+  <% end %>
 </div>

@@ -1,17 +1,15 @@
-<div class="col-6 g-3">
-  <div class="card h-100">
-    <%= link_to book_path(book, district: params[:district]) do %>
-        <img src="<%= book.cover_image %>" class="card-img-top" alt="book card">
-        <div class="card-body text-center">
-          <p class="card-text"><small><%= book.author %></small></p>
-        </div>
-    <% end %>
-    <% if defined?(copy) %>
-      <div class="card-footer mt-auto text-center">
-        <%= link_to copy_path(copy), class: "fs-6 card-location-users", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-          <i class="fa-solid fa-trash-can"></i>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+<div class="card-book">
+  <%= link_to book_path(book, district: params[:district]) do %>
+    <div class="card-cover">
+      <img src="<%= book.cover_image %>" alt="book card">
+    </div>
+    <p><%= book.author %></p>
+  <% end %>
+  <% if defined?(copy) %>
+    <div class="">
+      <%= link_to copy_path(copy), class: "", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+    </div>
+  <% end %>
 </div>

@@ -1,93 +1,87 @@
 <div class="container p-3 text-center">
-  <div class="container">
-    <h1>Meeting</h1>
-    <hr>
-    <div id='map'
+  <h1>Meeting</h1>
+  <hr>
+  <div id='map'
       style='width: 100%; height: 300px;'
       data-controller="map"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-markers-value="<%= @markers.to_json %>">
+  </div>
+  <br>
+  <p class="fs-2 text"><%= @location.name %></p>
+  <div class="mb-0">
+    <p class="mb-0">Address:</p>
+    <p class="fs-5 text"><%= @location.address %></p>
+  </div>
+  <div class="mb-0">
+    <p class="mb-0">Date:</p>
+    <p class="fs-5 text"><%= "#{@meeting.date}, #{"%02d" % @meeting.time.hour}:#{"%02d" % @meeting.time.min}" %></p>
+  </div>
+  <hr>
+  <h4>Status:</h4>
+  <% if current_user == @deliverer && @meeting.status == "pending"  %>
+    <div class="container d-flex justify-content-center align-items-center gap-3">
+      <%= link_to "Confirm", confirm_meeting_path(@meeting), class: "btn btn-success mb-3" %>
+      <%= link_to "Reject", cancel_meeting_path(@meeting), class: "btn btn-danger mb-3" %>
     </div>
-    <br>
-    <p class="fs-2 text"><%= @location.name %></p>
-    <div class="mb-0">
-      <p class="mb-0">Address:</p>
-      <p class="fs-5 text"><%= @location.address %></p>
-    </div>
-    <div class="mb-0">
-      <p class="mb-0">Date:</p>
-      <p class="fs-5 text"><%= "#{@meeting.date}, #{"%02d" % @meeting.time.hour}:#{"%02d" % @meeting.time.min}" %></p>
-    </div>
-    <hr>
-    <h4>Status:</h4>
-    <% if current_user == @deliverer && @meeting.status == "pending"  %>
-      <div class="container d-flex justify-content-center align-items-center gap-3">
-        <%= link_to "Confirm", confirm_meeting_path(@meeting), class: "btn btn-success mb-3" %>
-
-        <%= link_to "Reject", cancel_meeting_path(@meeting), class: "btn btn-danger mb-3" %>
-      </div>
-    <% elsif current_user == @deliverer && @meeting.status == "cancelled" %>
-      <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
-    <% elsif current_user == @deliverer && @meeting.status == "confirmed" %>
-      <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
-    <% elsif current_user == @receiver && @meeting.status == "pending" %>
-      <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status.capitalize %></button>
-    <% elsif current_user == @receiver && @meeting.status == "cancelled" %>
-      <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
-    <% elsif current_user == @receiver && @meeting.status == "confirmed" %>
-      <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
-    <% end %>
-
-    <div class="container d-flex justify-content-center align-items-center mt-1">
-      <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
-      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff">
-      <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
-    </div>
-    <div class="container d-flex justify-content-center align-items-center mb-1">
-      <span class="avatar-large"><%= @receiver.username %></span>
-      <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
-      <span class="avatar-large"><%=  @deliverer.username %></span>
-    </div>
-
-
-    <%# chat start %>
-    <h4>Chat:</h4>
-    <div class="container chatroom"
+  <% elsif current_user == @deliverer && @meeting.status == "cancelled" %>
+    <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
+  <% elsif current_user == @deliverer && @meeting.status == "confirmed" %>
+    <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
+  <% elsif current_user == @receiver && @meeting.status == "pending" %>
+    <button type="button" class="btn btn-success mb-3" disabled><%= @meeting.status.capitalize %></button>
+  <% elsif current_user == @receiver && @meeting.status == "cancelled" %>
+    <button type="button" class="btn btn-danger mb-3" disabled><%= @meeting.status.capitalize %></button>
+  <% elsif current_user == @receiver && @meeting.status == "confirmed" %>
+    <button type="button" class="btn btn-info mb-3" disabled><%= @meeting.status.capitalize %></button>
+  <% end %>
+  <div class="container d-flex justify-content-center align-items-center mt-1">
+    <%= image_tag @receiver.avatar, class: "avatar-bordered avatar-large"%>
+    <hr style="width:20%; border:none; border-top:1px dashed; height:1px; background-color:#fff">
+    <%= image_tag @deliverer.avatar, class: "avatar-bordered avatar-large"%>
+  </div>
+  <div class="container d-flex justify-content-center align-items-center mb-1">
+    <span class="avatar-large"><%= @receiver.username %></span>
+    <hr style="width:20%; border:none; border-top:1px dashed; height:1px; opacity:0">
+    <span class="avatar-large"><%=  @deliverer.username %></span>
+  </div>
+  <%# chat start %>
+  <h4>Chat:</h4>
+  <div class="container chatroom"
       data-controller="chatroom-subscription"
       data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     >
-      <div class="messages" data-chatroom-subscription-target="messages">
-        <% @chatroom.messages.each do |message| %>
-          <%= render "messages/message", { message: message, receiver: @receiver } %>
-        <% end %>
-      </div>
-      <%= simple_form_for [@meeting, @message],
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", { message: message, receiver: @receiver } %>
+      <% end %>
+    </div>
+    <%= simple_form_for [@meeting, @message],
         html: { data: { controller: :chatroom_subscription, action: "turbo:submit-end->chatroom-subscription#resetForm" },
-                class: "d-flex" } do |f|
-      %>
-        <%= f.input :content,
+                class: "d-flex" } do |f| %>
+      <%= f.input :content,
           label: false,
           placeholder: "Write a message",
           wrapper_html: {class: "flex-grow-1"}
-        %>
-        <%= f.submit "Send", class: "btn btn-success mb-3" %>
-      <% end %>
-    </div>
-  <%# chat end %>
-  <div class="container">
-    <hr>
-  </div>
-  <div class="container">
-    <h4>Books:</h4>
-    <% if @handovers.count > 0 %>
-      <div class="row justify-content-center">
-        <% @handovers.each do |handover| %>
-          <% book = handover.copy.book %>
-          <%= render 'shared/bookcard', book: book %>
-        <% end %>
-      </div>
-    <% else %>
-      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+          %>
+      <%= f.submit "Send", class: "btn btn-success mb-3" %>
     <% end %>
   </div>
+  <%# chat end %>
+  <hr>
+  <h4>Books:</h4>
 </div>
+<% if @handovers.count > 0 %>
+  <% if @handovers.count == 1 %>
+    <div class="cards-grid" style="grid-template-columns: 1fr;">
+  <% else %>
+    <div class="cards-grid">
+  <% end %>
+    <% @handovers.each do |handover| %>
+      <% book = handover.copy.book %>
+      <%= render 'shared/bookcard', book: book %>
+    <% end %>
+  </div>
+<% else %>
+  <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
+<% end %>

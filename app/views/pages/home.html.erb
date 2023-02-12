@@ -1,4 +1,4 @@
-<div class="container" data-controller="update-area">
+<div data-controller="update-area">
 <br>
   <h1 class="text-center font-logo mb-4">
   <%= image_tag "mb_logo.png", alt: "matchbooks", width: 50 %>matchbooks</h1>
@@ -19,9 +19,8 @@
       <% end %>
     </div>
   </div>
-  <br>
   <hr>
-  <div class="container" data-update-area-target="bookList">
+  <div data-update-area-target="bookList">
     <% if (@search_term != nil && @search_term != "") && @search_district != "All areas" %>
       <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %>:</h3>
     <% elsif (@search_term != nil && @search_term != "") && @search_district == "All areas" %>
@@ -33,7 +32,7 @@
     <% end %>
 
     <% if @filtered_books.count > 0 %>
-      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+      <div class="cards-grid">
         <% @filtered_books.reverse.each do |book| %>
           <% if book.copies.count > 0 %>
             <%= render 'shared/bookcard', book: book %>
