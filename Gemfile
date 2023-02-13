@@ -83,6 +83,7 @@ group :test do
 end
 
 # my gems
+gem 'bootstrap'
 gem 'httparty'
 gem "pundit"
 gem "geocoder"

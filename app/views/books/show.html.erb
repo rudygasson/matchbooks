@@ -4,7 +4,7 @@
     <h2><%= @book.title %></h2>
     <p>by <em><%= @book.author %></em></p>
     <div data-controller="read-more">
-    <p><small><b>Published:</b> <%= @book.year %></small></p>
+      <p><small><b>Published:</b> <%= @book.year %></small></p>
       <div data-read-more-target="shortText">
         <small><%= truncate(@book.description, length: 100) %></small>
       </div>
@@ -20,49 +20,47 @@
     </div>
   </div>
   <hr>
-  <div class="container">
-    <h1>Locations:</h1>
-    <%# accordion %>
-    <% if @locations_uniq.empty? %>
-      <p><em>Sorry, but this book is currently not available...</em></p>
-    <% else %>
-      <%# iterate over available locations %>
-      <% @locations_uniq.each do |location| %>
-        <div class="accordion accordion-flush">
-          <div class="accordion-item mt-2">
-            <div class="accordion-header" id="flush-heading<%= location.id %>">
-              <div class="button collapsed card-location text-white"
+  <h1>Locations:</h1>
+  <%# accordion %>
+  <% if @locations_uniq.empty? %>
+    <p><em>Sorry, but this book is currently not available...</em></p>
+  <% else %>
+    <%# iterate over available locations %>
+    <% @locations_uniq.each do |location| %>
+      <div class="accordion accordion-flush">
+        <div class="accordion-item mt-2">
+          <div class="accordion-header" id="flush-heading<%= location.id %>">
+            <div class="button collapsed card-location text-white"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapse<%= location.id %>"
                     aria-expanded="false"
                     aria-controls="flush-collapse<%= location.id %>"
               >
-                <%= location.name %>
-                <span class="fs-6 card-location-users"><i class="fa-solid fa-user-group"></i> <%= (location.users & @location_book_users_uniq).count %></span>
-              </div>
+              <%= location.name %>
+              <span class="fs-6 card-location-users"><i class="fa-solid fa-user-group"></i> <%= (location.users & @location_book_users_uniq).count %></span>
             </div>
-            <div id="flush-collapse<%= location.id %>" class="accordion-collapse collapse" aria-labelledby="flush-heading<%= location.id %>" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body bg-white">
-                <%# show users that offer the book at this location %>
-                <p class="mb-2"><small>Set up a meeting with:</small></p>
-                <%# iterate over available users at location %>
-                <% location.users.each do |user| %>
-                  <% if (user.copies.find_by book_id: params[:id]) %>
-                    <% unless user == current_user %>
-                      <%= link_to new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])), class: "text-decoration-none" do %>
-                        <div class="btn-user d-flex align-items-center mb-1 gap-2 border rounded p-1" >
-                          <%= image_tag user.avatar, class: "avatar" %>
-                          <small class="text-black"><%= user.username %></small>
-                        </div>
-                      <% end %>
+          </div>
+          <div id="flush-collapse<%= location.id %>" class="accordion-collapse collapse" aria-labelledby="flush-heading<%= location.id %>" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-white">
+              <%# show users that offer the book at this location %>
+              <p class="mb-2"><small>Set up a meeting with:</small></p>
+              <%# iterate over available users at location %>
+              <% location.users.each do |user| %>
+                <% if (user.copies.find_by book_id: params[:id]) %>
+                  <% unless user == current_user %>
+                    <%= link_to new_meeting_path(location: location, copy: (user.copies.find_by book_id: params[:id])), class: "text-decoration-none" do %>
+                      <div class="btn-user d-flex align-items-center mb-1 gap-2 border rounded p-1" >
+                        <%= image_tag user.avatar, class: "avatar" %>
+                        <small class="text-black"><%= user.username %></small>
+                      </div>
                     <% end %>
                   <% end %>
                 <% end %>
-              </div>
+              <% end %>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
 </div>

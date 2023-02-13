@@ -1,4 +1,4 @@
-<div class="mt-3 text-center">
+<div class="container mt-3 text-center">
   <h1>Profile</h1>
   <%= image_tag "#{current_user.avatar}", class: "avatar-xl avatar-bordered mb-4" %>
   <h5>Username:</h5>
@@ -17,7 +17,7 @@
   <% if @user_locations.count == 0 %>
     <p>You currently have no locations</p>
   <% else %>
-    <div class="container mb-3">
+    <div class="mb-3">
       <% @locations_of_user.each do |location_of_user| %>
         <div class="accordion accordion-flush">
           <div class="accordion-item mt-2">
