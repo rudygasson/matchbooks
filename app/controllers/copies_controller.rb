@@ -18,13 +18,14 @@ class CopiesController < ApplicationController
     # check if the isbn already exists in the DB
     book = Book.find_by isbn: isbn
     # if no isbn matches => get book info from google books API
-    if book.nil?
+    if book.nil? && isbn.length >= 10
       book = make_google_books_request(book_params, isbn)
     end
     # if no book was found via API => render :new
     if book.nil?
       @book = Book.new
       authorize @book # pundit
+      flash.alert = "Error - No matching book found"
       render(:new, status: :unprocessable_entity)
     # if a book was found via API => create copy
     else
@@ -37,6 +38,7 @@ class CopiesController < ApplicationController
         # redirect to user library
         redirect_to copies_path
       else
+        flash.alert = "Error - Could not save this copy"
         render(:new, status: :unprocessable_entity)
       end
     end
