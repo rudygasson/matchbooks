@@ -1,0 +1,17 @@
+one:
+  author: Autor A
+  title: Hello World
+  description: MyString
+  isbn: 2348234829342
+
+two:
+  author: Author B
+  title: Book of the Year
+  description: MyString
+  isbn: 2934098234793
+
+turing:
+  author: George Dyson
+  title: Turing's Cathedral
+  isbn: 9780375422775
+  year: 2012
