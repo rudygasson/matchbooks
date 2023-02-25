@@ -1,6 +1,7 @@
 class Book < ApplicationRecord
   has_many :copies, dependent: :destroy
   has_many :users, through: :copies
+  has_many :locations, through: :users
   validates :isbn, :title, :author, :year, presence: true
   validates :isbn, length: { in: 10..13 }
   validates :isbn, uniqueness: true

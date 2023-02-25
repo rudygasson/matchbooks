@@ -31,12 +31,10 @@
       <h3 class="text-center">Latest books in Berlin:</h3>
     <% end %>
 
-    <% if @filtered_books.count > 0 %>
+    <% if @filtered_books.size > 0 %>
       <div class="cards-grid">
         <% @filtered_books.reverse.each do |book| %>
-          <% if book.copies.count > 0 %>
-            <%= render 'shared/bookcard', book: book %>
-          <% end %>
+          <%= render 'shared/bookcard', book: book %>
         <% end %>
       </div>
     <% else %>

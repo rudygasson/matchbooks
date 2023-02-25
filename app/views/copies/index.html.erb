@@ -2,7 +2,7 @@
   <h1>My library</h1>
   <%= link_to "Add a book", new_copy_path, class: "btn btn-success my-4" %>
 </div>
-<% if @copies.count > 0 %>
+<% if @copies.size > 0 %>
   <div class="cards-grid">
     <% @copies.reverse.each do |copy| %>
       <%= render 'shared/bookcard', book: copy.book, copy: copy %>
