@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: matchbooks_production
   username: matchbooks
   password: <%= ENV["MATCHBOOKS_DATABASE_PASSWORD"] %>
