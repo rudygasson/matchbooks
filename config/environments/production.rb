@@ -92,6 +92,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Allow hostname
+  # Allow hostnames
   config.hosts << "matchbooks-production.up.railway.app"
+  config.hosts << "www.matchbooks.club"
+  config.hosts << "matchbooks.club"
 end
