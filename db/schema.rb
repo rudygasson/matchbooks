@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "books", force: :cascade do |t|
     t.string "isbn"
     t.string "title"
@@ -27,15 +24,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
   end
 
   create_table "chatrooms", force: :cascade do |t|
-    t.bigint "meeting_id", null: false
+    t.integer "meeting_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["meeting_id"], name: "index_chatrooms_on_meeting_id"
   end
 
   create_table "copies", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "book_id", null: false
+    t.integer "user_id", null: false
+    t.integer "book_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_copies_on_book_id"
@@ -43,11 +40,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
   end
 
   create_table "handovers", force: :cascade do |t|
-    t.bigint "meeting_id", null: false
-    t.bigint "copy_id", null: false
-    t.bigint "receiver_id", null: false
-    t.bigint "deliverer_id", null: false
-    t.integer "status"
+    t.integer "meeting_id", null: false
+    t.integer "copy_id", null: false
+    t.integer "receiver_id", null: false
+    t.integer "deliverer_id", null: false
+    t.integer "status", null: false
     t.datetime "confirmed", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -71,8 +68,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
   create_table "meetings", force: :cascade do |t|
     t.date "date"
     t.time "time"
-    t.bigint "location_id", null: false
-    t.integer "status"
+    t.integer "location_id", null: false
+    t.integer "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_meetings_on_location_id"
@@ -80,8 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
 
   create_table "messages", force: :cascade do |t|
     t.string "content"
-    t.bigint "chatroom_id", null: false
-    t.bigint "user_id", null: false
+    t.integer "chatroom_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
@@ -89,8 +86,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_082834) do
   end
 
   create_table "user_locations", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "location_id", null: false
+    t.integer "user_id", null: false
+    t.integer "location_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_user_locations_on_location_id"

@@ -4,7 +4,7 @@ class CreateMeetings < ActiveRecord::Migration[7.0]
       t.date :date
       t.time :time
       t.references :location, null: false, foreign_key: true
-      t.enum :status, enum_type: :integer, default: :pending
+      t.integer :status, null: false
 
       t.timestamps
     end

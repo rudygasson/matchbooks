@@ -5,7 +5,7 @@ class CreateHandovers < ActiveRecord::Migration[7.0]
       t.references :copy, null: false, foreign_key: true
       t.references :receiver, null: false, foreign_key: { to_table: :users }
       t.references :deliverer, null: false, foreign_key: { to_table: :users }
-      t.enum :status, enum_type: :integer, default: :pending
+      t.integer :status, null: false
       t.timestamp :confirmed
 
       t.timestamps
