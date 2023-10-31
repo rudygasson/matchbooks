@@ -93,6 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Allow hostnames
+  config.hosts << "matchbooks-lw.herokuapp.com"
   config.hosts << "matchbooks-production.up.railway.app"
   config.hosts << "www.matchbooks.club"
   config.hosts << "matchbooks.club"
