@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @search_district = params[:district]
     @search_term = params[:query]
-    sql_query = "title ILIKE :query OR author ILIKE :query"
+    sql_query = "title LIKE :query OR author LIKE :query"
     if (@search_term != nil && @search_term != "") && @search_district != "All areas"
       @filtered_books = Book.where(sql_query, query: "%#{@search_term}%", locations: { district: @search_district })
     elsif (@search_term != nil && @search_term != "") && @search_district == "All areas"
