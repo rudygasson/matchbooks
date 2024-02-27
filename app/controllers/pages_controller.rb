@@ -2,35 +2,21 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @search_district = params[:district]
+    @all = "All"
+    @search_district = params[:district] || @all
     @search_term = params[:query]
+    @districts = [@all] + Location.select(:district).distinct.map { |loc| loc.district }
     sql_query = "title LIKE :query OR author LIKE :query"
-    if (@search_term != nil && @search_term != "") && @search_district != "All areas"
-      @filtered_books = Book.where(sql_query, query: "%#{@search_term}%", locations: { district: @search_district })
-    elsif (@search_term != nil && @search_term != "") && @search_district == "All areas"
-      @filtered_books = Book.where(sql_query, query: "%#{@search_term}%")
-    elsif @search_term == "" && @search_district != "All areas"
-      @filtered_books = Book.includes(:locations).where(locations: { district: @search_district })
-    else
-      @filtered_books = Book.includes(:copies).select { |book| book.copies.size > 0 }
-    end
-    @districts = ["All areas", "Charlottenburg-Wilmersdorf", "Friedrichshain-Kreuzberg", "Lichtenberg", "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Treptow-Köpenick"]
+    @filtered_books = Book.includes(:locations, :copies)
+    @filtered_books = @filtered_books.where(locations: {district: @search_district}) if (@search_district != @all)
+
+    @filtered_books = @filtered_books
+      .where(sql_query, query: "%#{@search_term}%")
+      .select { |book| book.copies.size > 0 }
 
     respond_to do |format|
       format.html
       format.json
     end
-  end
-
-  private
-
-  def book_districts(book)
-    users = book.users
-    locations = []
-    users.each do |user|
-      locations += user.locations
-    end
-    districts = locations.map { |location| location.district.downcase }
-    return districts
   end
 end

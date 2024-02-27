@@ -1,21 +1,25 @@
 <div data-controller="update-area">
-<br>
+  <br>
   <h1 class="text-center font-logo mb-4">
-  <%= image_tag "mb_logo.png", alt: "matchbooks", width: 50 %>matchbooks</h1>
+    <%= image_tag "mb_logo.png", alt: "matchbooks", width: 50 %>matchbooks</h1>
   <h4 class="text-center">Find books in your area</h4>
   <div class="container">
     <div class="row mx-auto">
       <%= form_tag root_path, method: :get do %>
-          <%= select_tag "district", options_for_select(@districts, params[:district].nil? ? "All areas" : params[:district]), {"class" => "col-12 form-select", "data-action" => "change->update-area#refresh", "data-update-area-target" => "select" } %>
+        <%= select_tag "district",
+          options_for_select(@districts, @search_district),
+          { class: "col-12 form-select",
+            "data-action": "change->update-area#refresh",
+            "data-update-area-target": "select" } %>
         <div class="d-flex">
           <%= text_field_tag :query,
                               params[:query],
                               class: "form-control",
                               placeholder: "Search here" %>
           <%= button_tag class: "btn btn-success" do %>
-          <i class='fas fa-search'></i>
+            <i class='fas fa-search'></i>
+          <% end %>
         </div>
-        <% end %>
       <% end %>
     </div>
   </div>
@@ -30,7 +34,6 @@
     <% else %>
       <h3 class="text-center">Latest books in Berlin:</h3>
     <% end %>
-
     <% if @filtered_books.size > 0 %>
       <div class="cards-grid">
         <% @filtered_books.reverse.each do |book| %>
