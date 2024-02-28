@@ -1,5 +1,4 @@
-<div data-controller="update-area">
-  <br>
+<div data-controller="update-area" class="pt-4">
   <h1 class="text-center font-logo mb-4">
     <%= image_tag "mb_logo.png", alt: "matchbooks", width: 50 %>matchbooks</h1>
   <h4 class="text-center">Find books in your area</h4>
@@ -15,6 +14,7 @@
           <%= text_field_tag :query,
                               params[:query],
                               class: "form-control",
+                              "data-update-area-target": "query",
                               placeholder: "Search here" %>
           <%= button_tag class: "btn btn-success" do %>
             <i class='fas fa-search'></i>
@@ -25,23 +25,6 @@
   </div>
   <hr>
   <div data-update-area-target="bookList">
-    <% if (@search_term != nil && @search_term != "") && @search_district != "All areas" %>
-      <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %>:</h3>
-    <% elsif (@search_term != nil && @search_term != "") && @search_district == "All areas" %>
-      <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in Berlin:</h3>
-    <% elsif @search_term == "" && @search_district != "All areas" %>
-      <h3 class="text-center">Latest books in <%= @search_district %>:</h3>
-    <% else %>
-      <h3 class="text-center">Latest books in Berlin:</h3>
-    <% end %>
-    <% if @filtered_books.size > 0 %>
-      <div class="cards-grid">
-        <% @filtered_books.reverse.each do |book| %>
-          <%= render 'shared/bookcard', book: book %>
-        <% end %>
-      </div>
-    <% else %>
-      <p class="text-center"><em>There aren't any books available for this search. Try another one!</em></p>
-    <% end %>
+    <%= render 'insert' %>
   </div>
 </div>
