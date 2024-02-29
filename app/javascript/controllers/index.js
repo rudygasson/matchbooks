@@ -21,6 +21,3 @@ application.register("read-more", ReadMoreController)
 
 import ScannerController from "./scanner_controller.js"
 application.register("scanner", ScannerController)
-
-import UpdateAreaController from "./update_area_controller.js"
-application.register("update-area", UpdateAreaController)

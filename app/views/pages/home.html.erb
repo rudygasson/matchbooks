@@ -1,31 +1,27 @@
-<div data-controller="update-area" class="pt-4">
-  <h1 class="text-center font-logo mb-4">
-    <%= image_tag "mb_logo.png", alt: "matchbooks", width: 50 %>matchbooks</h1>
-  <h4 class="text-center">Find books in your area</h4>
-  <div class="container">
-    <div class="row mx-auto pb-4">
-      <%= form_with url: "/search" do |form| %>
-        <%= form.label :district, "District" %>
-        <%= form.select :district,
+<h3 class="text-center pt-4">Find books in your area</h3>
+<div class="container">
+  <div class="row mx-auto pb-4">
+    <%= form_with url: "/search" do |form| %>
+      <%= form.label :district, "District" %>
+      <%= form.select :district,
           @districts,
           { selected: @search_district },
           { class: "col-12 form-control",
-            onchange: "this.form.requestSubmit()"  } %>
-        <%= form.label :query, "Search by title or author" %>
-        <div class="d-flex">
-          <%= form.text_field :query,
+            onchange: "this.form.requestSubmit()" } %>
+      <%= form.label :query, "Search" %>
+      <div class="d-flex">
+        <%= form.text_field :query,
           value: params[:query],
-          placeholder: "Pratchett",
+          placeholder: "title or author",
           oninput: "this.form.requestSubmit()",
           class: "form-control" %>
-          <%= button_tag class: "btn btn-success" do %>
-            <i class='fas fa-search'></i>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+        <%= button_tag class: "btn btn-success" do %>
+          <i class='fas fa-search'></i>
+        <% end %>
+      </div>
+    <% end %>
   </div>
-  <div id="search_results">
-    <%= render 'search_results' %>
-  </div>
+</div>
+<div id="search_results">
+  <%= render 'search_results' %>
 </div>
