@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   devise_for :users
   root to: "pages#home"
+  post "/search", to: "pages#search"
 
   resources :copies, only: %i[index new create destroy]
   resources :books, only: %i[show]
