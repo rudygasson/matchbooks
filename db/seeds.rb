@@ -10,6 +10,21 @@ users_with_avatar = {
   philipp: "https://ca.slack-edge.com/T02NE0241-U039QLUS77Y-f472821e2f94-512"
 }
 
+districts = [
+  "Charlottenburg-Wilmersdorf",
+  "Friedrichshain-Kreuzberg",
+  "Lichtenberg",
+  "Marzahn-Hellersdorf",
+  "Mitte",
+  "Neukölln",
+  "Pankow",
+  "Reinickendorf",
+  "Spandau",
+  "Steglitz-Zehlendorf",
+  "Tempelhof-Schöneberg",
+  "Treptow-Köpenick"
+]
+
 puts "Add #{users_with_avatar.count} Users..."
 users_with_avatar.each do |key, value|
   User.create(

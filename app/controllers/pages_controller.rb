@@ -1,36 +1,23 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :search]
+  ALL_AREAS = "Berlin"
 
   def home
-    @search_district = params[:district]
-    @search_term = params[:query]
-    sql_query = "title LIKE :query OR author LIKE :query"
-    if (@search_term != nil && @search_term != "") && @search_district != "All areas"
-      @filtered_books = Book.where(sql_query, query: "%#{@search_term}%", locations: { district: @search_district })
-    elsif (@search_term != nil && @search_term != "") && @search_district == "All areas"
-      @filtered_books = Book.where(sql_query, query: "%#{@search_term}%")
-    elsif @search_term == "" && @search_district != "All areas"
-      @filtered_books = Book.includes(:locations).where(locations: { district: @search_district })
-    else
-      @filtered_books = Book.includes(:copies).select { |book| book.copies.size > 0 }
-    end
-    @districts = ["All areas", "Charlottenburg-Wilmersdorf", "Friedrichshain-Kreuzberg", "Lichtenberg", "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Treptow-Köpenick"]
-
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    @area = ALL_AREAS
+    @areas = [ALL_AREAS] + Location.select(:district).distinct.map { |loc| loc.district }
+    @books = Book.all.limit(6)
   end
 
-  private
+  def search
+    books = Book.with_title_or_author(params[:query]).in_area(params[:area], ALL_AREAS)
 
-  def book_districts(book)
-    users = book.users
-    locations = []
-    users.each do |user|
-      locations += user.locations
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.update(
+          "search_results",
+          partial: "search_results",
+          locals: { books:, query: params[:query], area: params[:area]})
+      end
     end
-    districts = locations.map { |location| location.district.downcase }
-    return districts
   end
 end

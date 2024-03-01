@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-menu-style">
   <div class="container-fluid">
-    <div class="navbar-logo"><a href="/" class="navbar-font-logo abs"><%= image_tag "mb_logo.png", alt: "matchbooks", width: 35 %>mb</a></div>
+    <div class="navbar-logo"><a href="/" class="navbar-font-logo abs"><%= image_tag "mb_logo.png", alt: "matchbooks", width: 35 %>matchbooks</a></div>
     <% if user_signed_in? %>
       <div class="ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
         <%= image_tag "#{current_user.avatar}",
