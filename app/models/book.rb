@@ -7,4 +7,13 @@ class Book < ApplicationRecord
   validates :isbn, uniqueness: true
   validates :year, length: { is: 4 }
   validates :description, length: { maximum: 3000 }
+
+  scope :with_title_or_author, -> (search_term) {
+    sql_query = "title LIKE :query OR author LIKE :query"
+    where(sql_query, query: "%#{search_term}%")
+  }
+  scope :in_area, -> (area, all_areas) {
+    return all if area == all_areas
+    where(locations: {district: area}).includes(:locations)
+  }
 end

@@ -1,15 +1,7 @@
-<% if (@search_term != nil && @search_term != "") && @search_district != "All areas" %>
-  <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in <%= @search_district %>:</h3>
-<% elsif (@search_term != nil && @search_term != "") && @search_district == "All areas" %>
-  <h3 class="text-center">Latest books for '<strong><%= @search_term %></strong>' in Berlin:</h3>
-<% elsif @search_term == "" && @search_district != "All areas" %>
-  <h3 class="text-center">Latest books in <%= @search_district %>:</h3>
-<% else %>
-  <h3 class="text-center">Latest books in Berlin:</h3>
-<% end %>
-<% if @filtered_books.size > 0 %>
+<% if books.length > 0 %>
+  <h3 class="text-center"><%= query.blank? ? "Latest books " : "Books for '#{query}' " %>in <%= area %></h3>
   <div class="cards-grid">
-    <% @filtered_books.reverse.each do |book| %>
+    <% books.reverse.each do |book| %>
       <%= render 'shared/bookcard', book: book %>
     <% end %>
   </div>
