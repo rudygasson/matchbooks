@@ -3,7 +3,7 @@
     <div class="navbar-logo"><a href="/" class="navbar-font-logo abs"><%= image_tag "mb_logo.png", alt: "matchbooks", width: 35 %>matchbooks</a></div>
     <% if user_signed_in? %>
       <div class="ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
-        <%= image_tag "#{current_user.avatar}",
+        <%= image_tag "#{current_user.avatar ? current_user.avatar : 'default.jpg'}",
             class: "avatar",
             html: { id: "navbarDropdown", data_bs_toggle: "dropdown" } %>
       </div>
