@@ -4,20 +4,23 @@
 
 import { application } from "./application"
 
-import ChatroomSubscriptionController from "./chatroom_subscription_controller.js"
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
-import FlatpickrController from "./flatpickr_controller.js"
+import DebounceController from "./debounce_controller"
+application.register("debounce", DebounceController)
+
+import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
-import HelloController from "./hello_controller.js"
+import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import MapController from "./map_controller.js"
+import MapController from "./map_controller"
 application.register("map", MapController)
 
-import ReadMoreController from "./read_more_controller.js"
+import ReadMoreController from "./read_more_controller"
 application.register("read-more", ReadMoreController)
 
-import ScannerController from "./scanner_controller.js"
+import ScannerController from "./scanner_controller"
 application.register("scanner", ScannerController)
