@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     @area = ALL_AREAS
     @areas = [ALL_AREAS] + Location.select(:district).distinct.map { |loc| loc.district }
-    @books = Book.all.limit(6)
+    @books = Book.last(6)
   end
 
   def search
