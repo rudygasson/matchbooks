@@ -1,9 +1,11 @@
-<%= form_with url: "/search" do |form| %>
+<%= form_with url: "/search", data: {
+  controller: 'debounce',
+  debounce_target: 'form' } do |form| %>
   <div class="form-floating my-3">
     <%= form.text_field :query,
           placeholder: "",
           autofocus: true,
-          oninput: "this.form.requestSubmit()",
+          data: { action: "input->debounce#search" },
           class: "form-control" %>
     <%= form.label :query, "Title or Author" %>
   </div>
